@@ -1,0 +1,1339 @@
+**** Entra a process_url(/)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/IT/2010/1026/800.html
+Se descarta /a/IT/2010/1026/800.html
+Analizando url = /a/IT/2010/1015/798.html
+Se descarta /a/IT/2010/1015/798.html
+Analizando url = /a/IT/2010/1015/797.html
+Se descarta /a/IT/2010/1015/797.html
+Analizando url = /a/IT/2010/0917/718.html
+Se descarta /a/IT/2010/0917/718.html
+Analizando url = /a/os/linux/2010/0817/486.html
+**** Entra a process_url(/a/os/linux/2010/0817/486.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+**** Entra a process_url(/a/os/linux/)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+**** Entra a process_url(/a/os/linux/2010/0908/663.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = http://www.ixdba.net/a/os/linux/
+Se descarta http://www.ixdba.net/a/os/linux/
+Analizando url = /a/os/linux/2010/0831/598.html
+**** Entra a process_url(/a/os/linux/2010/0831/598.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0831/597.html
+**** Entra a process_url(/a/os/linux/2010/0831/597.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = http://www.ixdba.net/a/os/linux/
+Se descarta http://www.ixdba.net/a/os/linux/
+Analizando url = http://ftp.riken.jp/Linux/caos/centos/RPM-GPG-KEY-centos4
+Se descarta http://ftp.riken.jp/Linux/caos/centos/RPM-GPG-KEY-centos4
+Analizando url = /a/os/linux/2010/0826/535.html
+**** Entra a process_url(/a/os/linux/2010/0826/535.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = http://www.ixdba.net/a/os/linux/
+Se descarta http://www.ixdba.net/a/os/linux/
+Analizando url = /a/os/linux/2010/0817/486.html
+Se descarta /a/os/linux/2010/0817/486.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+**** Entra a process_url(/a/os/linux/2010/0507/98.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0430/94.html
+**** Entra a process_url(/a/os/linux/2010/0430/94.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+**** Entra a process_url(/a/os/linux/2010/0711/315.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = http://www.ixdba.net/a/os/linux/
+Se descarta http://www.ixdba.net/a/os/linux/
+Analizando url = http://www.ixdba.net/a/os/linux/
+Se descarta http://www.ixdba.net/a/os/linux/
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+**** Entra a process_url(/a/os/linux/2010/0421/10.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = http://www.ixdba.net/a/os/linux/
+Se descarta http://www.ixdba.net/a/os/linux/
+Analizando url = /a/os/linux/2010/0421/9.html
+**** Entra a process_url(/a/os/linux/2010/0421/9.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0421/8.html
+**** Entra a process_url(/a/os/linux/2010/0421/8.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0421/7.html
+**** Entra a process_url(/a/os/linux/2010/0421/7.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0421/6.html
+**** Entra a process_url(/a/os/linux/2010/0421/6.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0421/7.html
+Se descarta /a/os/linux/2010/0421/7.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0421/8.html
+Se descarta /a/os/linux/2010/0421/8.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0421/9.html
+Se descarta /a/os/linux/2010/0421/9.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0422/33.html
+**** Entra a process_url(/a/os/linux/2010/0422/33.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0422/34.html
+**** Entra a process_url(/a/os/linux/2010/0422/34.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0422/33.html
+Se descarta /a/os/linux/2010/0422/33.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0817/486.html
+Se descarta /a/os/linux/2010/0817/486.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0817/485.html
+**** Entra a process_url(/a/os/linux/2010/0817/485.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0817/486.html
+Se descarta /a/os/linux/2010/0817/486.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0817/485.html
+Se descarta /a/os/linux/2010/0817/485.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/IT/2010/0812/439.html
+Se descarta /a/IT/2010/0812/439.html
+Analizando url = /a/os/linux/2010/0803/394.html
+**** Entra a process_url(/a/os/linux/2010/0803/394.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0803/393.html
+**** Entra a process_url(/a/os/linux/2010/0803/393.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0803/392.html
+**** Entra a process_url(/a/os/linux/2010/0803/392.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0729/375.html
+**** Entra a process_url(/a/os/linux/2010/0729/375.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0729/374.html
+**** Entra a process_url(/a/os/linux/2010/0729/374.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0729/373.html
+**** Entra a process_url(/a/os/linux/2010/0729/373.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0728/372.html
+**** Entra a process_url(/a/os/linux/2010/0728/372.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0727/371.html
+**** Entra a process_url(/a/os/linux/2010/0727/371.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0727/370.html
+**** Entra a process_url(/a/os/linux/2010/0727/370.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0727/369.html
+**** Entra a process_url(/a/os/linux/2010/0727/369.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0727/368.html
+**** Entra a process_url(/a/os/linux/2010/0727/368.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0725/362.html
+**** Entra a process_url(/a/os/linux/2010/0725/362.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = http://www.ixdba.net/a/os/linux/
+Se descarta http://www.ixdba.net/a/os/linux/
+Analizando url = /a/os/linux/2010/0725/361.html
+**** Entra a process_url(/a/os/linux/2010/0725/361.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0725/360.html
+**** Entra a process_url(/a/os/linux/2010/0725/360.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0725/359.html
+**** Entra a process_url(/a/os/linux/2010/0725/359.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0725/358.html
+**** Entra a process_url(/a/os/linux/2010/0725/358.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0725/357.html
+**** Entra a process_url(/a/os/linux/2010/0725/357.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = http://www.ixdba.net/a/os/linux/
+Se descarta http://www.ixdba.net/a/os/linux/
+Analizando url = /a/os/linux/2010/0723/343.html
+**** Entra a process_url(/a/os/linux/2010/0723/343.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = http://www.ixdba.net/a/os/linux/
+Se descarta http://www.ixdba.net/a/os/linux/
+Analizando url = http://www.ixdba.net/a/os/linux/
+Se descarta http://www.ixdba.net/a/os/linux/
+Analizando url = /a/os/linux/2010/0722/342.html
+**** Entra a process_url(/a/os/linux/2010/0722/342.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = http://www.ixdba.net/a/os/linux/
+Se descarta http://www.ixdba.net/a/os/linux/
+Analizando url = /a/os/linux/2010/0719/327.html
+**** Entra a process_url(/a/os/linux/2010/0719/327.html)
+Analizando url = http://www.ixdba.net
+Se descarta http://www.ixdba.net
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0722/342.html
+Se descarta /a/os/linux/2010/0722/342.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0723/343.html
+Se descarta /a/os/linux/2010/0723/343.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0725/357.html
+Se descarta /a/os/linux/2010/0725/357.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0725/358.html
+Se descarta /a/os/linux/2010/0725/358.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0725/359.html
+Se descarta /a/os/linux/2010/0725/359.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0725/360.html
+Se descarta /a/os/linux/2010/0725/360.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0725/361.html
+Se descarta /a/os/linux/2010/0725/361.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0725/362.html
+Se descarta /a/os/linux/2010/0725/362.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0727/368.html
+Se descarta /a/os/linux/2010/0727/368.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0727/369.html
+Se descarta /a/os/linux/2010/0727/369.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0727/370.html
+Se descarta /a/os/linux/2010/0727/370.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0727/371.html
+Se descarta /a/os/linux/2010/0727/371.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0728/372.html
+Se descarta /a/os/linux/2010/0728/372.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0729/373.html
+Se descarta /a/os/linux/2010/0729/373.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0729/374.html
+Se descarta /a/os/linux/2010/0729/374.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0729/375.html
+Se descarta /a/os/linux/2010/0729/375.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0803/392.html
+Se descarta /a/os/linux/2010/0803/392.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0803/393.html
+Se descarta /a/os/linux/2010/0803/393.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0803/394.html
+Se descarta /a/os/linux/2010/0803/394.html
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/
+Se descarta /a/os/linux/
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+Analizando url = /a/os/linux/2010/0421/6.html
+Se descarta /a/os/linux/2010/0421/6.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+SE termina una rama!!!
+Analizando url = /a/os/linux/2010/0803/393.html
+Se descarta /a/os/linux/2010/0803/393.html
+Analizando url = /a/os/linux/2010/0803/392.html
+Se descarta /a/os/linux/2010/0803/392.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/IT/2010/0924/788.html
+Se descarta /a/IT/2010/0924/788.html
+Analizando url = /a/lb/2010/0920/766.html
+Se descarta /a/lb/2010/0920/766.html
+Analizando url = /a/os/linux/2010/0719/327.html
+Se descarta /a/os/linux/2010/0719/327.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/IT/2010/0422/54.html
+Se descarta /a/IT/2010/0422/54.html
+Analizando url = /a/IT/2010/0422/53.html
+Se descarta /a/IT/2010/0422/53.html
+Analizando url = /a/os/Solris/2010/0422/31.html
+Se descarta /a/os/Solris/2010/0422/31.html
+Analizando url = /a/os/linux/2010/0908/663.html
+Se descarta /a/os/linux/2010/0908/663.html
+Analizando url = /a/os/linux/2010/0831/598.html
+Se descarta /a/os/linux/2010/0831/598.html
+Analizando url = /a/os/linux/2010/0831/597.html
+Se descarta /a/os/linux/2010/0831/597.html
+Analizando url = /a/os/linux/2010/0826/535.html
+Se descarta /a/os/linux/2010/0826/535.html
+Analizando url = /a/os/linux/2010/0817/486.html
+Se descarta /a/os/linux/2010/0817/486.html
+Analizando url = /a/web/2010/0423/66.html
+Se descarta /a/web/2010/0423/66.html
+Analizando url = /a/web/apache/2010/0423/62.html
+Se descarta /a/web/apache/2010/0423/62.html
+Analizando url = /a/lb/2010/0920/766.html
+Se descarta /a/lb/2010/0920/766.html
+Analizando url = /a/lb/2010/0711/300.html
+Se descarta /a/lb/2010/0711/300.html
+Analizando url = /a/lb/2010/0610/200.html
+Se descarta /a/lb/2010/0610/200.html
+Analizando url = /a/mz/2010/0422/61.html
+Se descarta /a/mz/2010/0422/61.html
+Analizando url = /a/sp/2010/0711/309.html
+Se descarta /a/sp/2010/0711/309.html
+Analizando url = /a/sp/2010/0422/58.html
+Se descarta /a/sp/2010/0422/58.html
+Analizando url = /a/IT/2010/1026/800.html
+Se descarta /a/IT/2010/1026/800.html
+Analizando url = /a/IT/2010/1015/798.html
+Se descarta /a/IT/2010/1015/798.html
+Analizando url = /a/IT/2010/1015/797.html
+Se descarta /a/IT/2010/1015/797.html
+Analizando url = /a/IT/2010/0928/790.html
+Se descarta /a/IT/2010/0928/790.html
+Analizando url = /a/IT/2010/0924/788.html
+Se descarta /a/IT/2010/0924/788.html
+Analizando url = /a/IT/2010/0928/790.html
+Se descarta /a/IT/2010/0928/790.html
+Analizando url = /a/IT/2010/1015/797.html
+Se descarta /a/IT/2010/1015/797.html
+Analizando url = /a/IT/2010/1015/798.html
+Se descarta /a/IT/2010/1015/798.html
+Analizando url = /a/IT/2010/1026/800.html
+Se descarta /a/IT/2010/1026/800.html
+Analizando url = /plus/feedback.php?aid=10
+Se descarta /plus/feedback.php?aid=10
+Analizando url = /plus/feedback.php?aid=98
+Se descarta /plus/feedback.php?aid=98
+Analizando url = /plus/feedback.php?aid=98
+Se descarta /plus/feedback.php?aid=98
+Analizando url = /plus/feedback.php?aid=94
+Se descarta /plus/feedback.php?aid=94
+Analizando url = /a/IT/2010/1026/800.html
+Se descarta /a/IT/2010/1026/800.html
+Analizando url = /a/IT/2010/1015/798.html
+Se descarta /a/IT/2010/1015/798.html
+Analizando url = /a/IT/2010/1015/797.html
+Se descarta /a/IT/2010/1015/797.html
+Analizando url = /a/IT/2010/0928/790.html
+Se descarta /a/IT/2010/0928/790.html
+Analizando url = /a/IT/2010/0924/788.html
+Se descarta /a/IT/2010/0924/788.html
+Analizando url = /a/lb/2010/0920/766.html
+Se descarta /a/lb/2010/0920/766.html
+Analizando url = /a/os/linux/2010/0507/98.html
+Se descarta /a/os/linux/2010/0507/98.html
+Analizando url = /a/IT/2010/0430/90.html
+Se descarta /a/IT/2010/0430/90.html
+Analizando url = /a/os/linux/2010/0422/33.html
+Se descarta /a/os/linux/2010/0422/33.html
+Analizando url = /a/os/linux/2010/0711/315.html
+Se descarta /a/os/linux/2010/0711/315.html
+Analizando url = /a/os/linux/2010/0421/10.html
+Se descarta /a/os/linux/2010/0421/10.html
+Analizando url = /a/web/apache/2010/0423/62.html
+Se descarta /a/web/apache/2010/0423/62.html
+Analizando url = /a/os/linux/2010/0430/94.html
+Se descarta /a/os/linux/2010/0430/94.html
+SE termina una rama!!!
+*** Mostrando la lista de hechos
+La lista tiene 2 elementos
+Elemento 1: / 
+Elemento 2: http://www.ixdba.net 
+Mostrando la lista de seguidos
+La lista tiene 38 elementos
+Elemento 1: / 
+Elemento 2: /a/os/linux/2010/0817/486.html 
+Elemento 3: /a/os/linux/ 
+Elemento 4: /a/os/linux/2010/0908/663.html 
+Elemento 5: /a/os/linux/2010/0831/598.html 
+Elemento 6: /a/os/linux/2010/0831/597.html 
+Elemento 7: /a/os/linux/2010/0826/535.html 
+Elemento 8: /a/os/linux/2010/0507/98.html 
+Elemento 9: /a/os/linux/2010/0430/94.html 
+Elemento 10: /a/os/linux/2010/0711/315.html 
+Elemento 11: /a/os/linux/2010/0421/10.html 
+Elemento 12: /a/os/linux/2010/0421/9.html 
+Elemento 13: /a/os/linux/2010/0421/8.html 
+Elemento 14: /a/os/linux/2010/0421/7.html 
+Elemento 15: /a/os/linux/2010/0421/6.html 
+Elemento 16: /a/os/linux/2010/0422/33.html 
+Elemento 17: /a/os/linux/2010/0422/34.html 
+Elemento 18: /a/os/linux/2010/0817/485.html 
+Elemento 19: /a/os/linux/2010/0803/394.html 
+Elemento 20: /a/os/linux/2010/0803/393.html 
+Elemento 21: /a/os/linux/2010/0803/392.html 
+Elemento 22: /a/os/linux/2010/0729/375.html 
+Elemento 23: /a/os/linux/2010/0729/374.html 
+Elemento 24: /a/os/linux/2010/0729/373.html 
+Elemento 25: /a/os/linux/2010/0728/372.html 
+Elemento 26: /a/os/linux/2010/0727/371.html 
+Elemento 27: /a/os/linux/2010/0727/370.html 
+Elemento 28: /a/os/linux/2010/0727/369.html 
+Elemento 29: /a/os/linux/2010/0727/368.html 
+Elemento 30: /a/os/linux/2010/0725/362.html 
+Elemento 31: /a/os/linux/2010/0725/361.html 
+Elemento 32: /a/os/linux/2010/0725/360.html 
+Elemento 33: /a/os/linux/2010/0725/359.html 
+Elemento 34: /a/os/linux/2010/0725/358.html 
+Elemento 35: /a/os/linux/2010/0725/357.html 
+Elemento 36: /a/os/linux/2010/0723/343.html 
+Elemento 37: /a/os/linux/2010/0722/342.html 
+Elemento 38: /a/os/linux/2010/0719/327.html 

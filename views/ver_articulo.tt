@@ -1,0 +1,6 @@
+<div id="content">
+Mostrando el articulo <% params.id %><br/>
+Articulo url: <% articulo.url %> <br/>
+Articulo titulo: <% articulo.url_text %> <hr/>
+Articulo texto: <% articulo.texto %> <br/>
+</div>

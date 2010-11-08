@@ -1,0 +1,15 @@
+layout: "main"
+logger: "file"
+appname: "chnforo"
+plugins:
+        Database:
+            driver: 'mysql'
+            database: 'chnforo'
+            host: 'localhost'
+            username: 'chnuser'
+            password: 'maskayerro'
+            connectivity-check-threshold: 10
+            dbi_params:
+                RaiseError: 1
+                AutoCommit: 1
+            on_connect_do: ["SET NAMES 'utf8'", "SET CHARACTER SET 'utf8'" ]
