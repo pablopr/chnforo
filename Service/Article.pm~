@@ -1,0 +1,56 @@
+package Service::Article;
+use Dancer::Plugin::Database;
+
+sub new {
+  my $class = shift;
+  my $self = {};
+  bless $self, $class;
+  return $self;
+}
+
+
+sub get_article_by_id{
+  my $self = shift;
+  my $id = shift;
+  my $sth = database->prepare(
+            'select * from entradas where id = ?',);
+  $sth->execute($id);
+  $sth->fetchrow_hashref;
+}
+
+
+sub get_last_articles{
+  my $self = shift;
+  my $sth = $self->{dbh}->prepare('SELECT id,url_text from entradas order by fecha limit 20');
+  $sth->execute();
+  my @hash_ref_list= ();
+  
+  while (my $row = $sth->fetchrow_hashref()) {
+  	push(@hash_ref_list,$row);
+  }
+    
+  return @hash_ref_list;  
+}
+
+
+
+sub get_subcategories_id_from_article_id {
+  my $self = shift;
+  my $parent_article = shift;
+  my $sth = $self->{dbh}->prepare('select * from categories where
+  parent = ?
+  or parent in (select id from categories where parent = ?)');
+  $sth->execute($parent_article,$parent_article);
+  my $results = $sth->fetchall_arrayref();
+  
+  my @subarticle_ids;
+  for my $row(@$results) {
+    push @subarticle_ids, $row->[0];
+  }
+  
+  return @subarticle_ids;
+  
+}
+
+
+1;
