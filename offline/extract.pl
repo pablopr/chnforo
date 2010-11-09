@@ -6,8 +6,9 @@ use WWW::Mechanize;
 use Lingua::Translate;
 my $lang = @ARGV[0];
 our $BASE = "http://www.ixdba.net";
-#my $first = "/a/os/linux/";
-my $first = "/";
+our $foro = "linux";
+my $first = "/a/os/linux/list_11_6.html";
+#my $first = "/";
 our @hechos = &get_lista_query("select url from entradas");
 our @seguidos;
 push (@hechos,$first);
@@ -26,11 +27,12 @@ print "Mostrando la lista de seguidos\n";
 sub process_url() {
   my $url2do = shift;
   push(@seguidos,$url2do);
+  #&do_query("insert into seguidos values ('$url2do')");
   print "**** Entra a process_url($url2do)\n";
   $mech->get($BASE.$url2do);
   sleep(1);
   #my @links = $mech->find_all_links( tag => "a", text_regex => qr/linux/i );
-  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/a\//i );
+  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/linux/i);
   #&ver_links(@links);die;
   &process_links(@links);
   foreach $link (@links) {
@@ -80,7 +82,7 @@ sub process_links() {
      $content = $traductor->translate($content_5000);
      $content =~s/'/''/g;
      $fecha = &get_fecha($url);
-     &do_query("insert into entradas values('','linux','en','$url','$url_text','$fecha','','$content')");
+     &do_query("insert into entradas values('','$foro','en','$url','$url_text','$fecha','','$content')");
      push(@hechos,$url);
   }
 }

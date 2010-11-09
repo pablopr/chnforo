@@ -8,5 +8,10 @@ create table entradas(
   fecha date not null,
   creado timestamp default CURRENT_TIMESTAMP,
   texto text,
-  primary key (id))
-  
+  primary key (id));
+
+create table seguidos(
+  id int(10) unsigned not null auto_increment,
+  url varchar(255) not null,
+  creado timestamp default CURRENT_TIMESTAMP,
+  primary key (id))  
