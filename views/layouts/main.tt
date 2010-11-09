@@ -1,15 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
 <head>
-<title>chnforo</title>
-<link rel="stylesheet" href="/css/style.css" />
-<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<title>ChnForo poner un title.</title>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="index, follow" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" />
 </head>
 <body>
-<% content %>
-<div id="footer">
-Powered by <a href="http://perldancer.org/">Dancer</a> 1.1901
+
+<div id="header">
+	<p><a href="#" title="otro articulo">&laquo; Back to the other article</a></p>
+	<h1>Chnforo (forums from China)</h1>
+	<h2>poner algo chulo aqui.</h2>
+	
+	<p id="layoutdims">Enlaces no en menu?: <a href="#">un enlace</a> | <a href="#">otro enlace</a> | <strong>label chula</strong></p>
 </div>
-</body>
-</html>
+<div class="colmask threecol">
+	<div class="colmid">
+		<div class="colleft">
+			<% content %>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<p>Made by <a href="#">Roberto</a> and <a href="#">Pablo</a>. </p>
+</div>

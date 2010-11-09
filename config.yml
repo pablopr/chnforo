@@ -1,6 +1,13 @@
 layout: "main"
-logger: "file"
+logger: "console"
 appname: "chnforo"
+template: "template_toolkit"
+log: 'debug'
+
+engines:
+        template_toolkit:
+            EVAL_PERL: 1
+            
 plugins:
         Database:
             driver: 'mysql'

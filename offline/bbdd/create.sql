@@ -1,4 +1,4 @@
-drop table entradas;
+--drop table entradas;
 create table entradas(
   id int(10) unsigned not null auto_increment,
   foro varchar(20) not null default 'linux', 
