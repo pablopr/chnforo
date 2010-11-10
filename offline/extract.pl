@@ -6,9 +6,9 @@ use WWW::Mechanize;
 use Lingua::Translate;
 my $lang = @ARGV[0];
 our $BASE = "http://www.ixdba.net";
-our $foro = "linux";
+our $foro = "Load Balancing";
 our $category_slug = &slug($foro);
-my $first = "/a/os/linux/";
+my $first = "/a/lb/";
 #my $first = "/";
 our @hechos = &get_lista_query("select url from entries");
 our @seguidos;
@@ -26,6 +26,7 @@ print "Mostrando la lista de seguidos\n";
 sub slug() {
   my $text = shift;
   $text =~s/ /_/g;
+  $text =~s/\W//g;
   return $text;
 }
 
@@ -37,7 +38,7 @@ sub process_url() {
   $mech->get($BASE.$url2do);
   sleep(1);
   #my @links = $mech->find_all_links( tag => "a", text_regex => qr/linux/i );
-  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/linux/i);
+  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/lb/i);
   #&ver_links(@links);die;
   &process_links(@links);
   foreach $link (@links) {
@@ -55,6 +56,7 @@ sub ver_links() {
   foreach my $link (@links) { 
      my $url_text = $link->text();
      my $url = $link->url();
+     print "Url_text antes traducir: $url_text\n";
      $url_text = $traductor->translate($url_text);
      $url_text =~s/】 【/ /gi;
      print "Link: $url,$url_text\n"; 
@@ -105,6 +107,11 @@ sub process_links() {
      $fecha = &get_fecha($url);
      my $summary = &get_html2text($articulo);
      $summary = &trunca($summary,300);
+     my $summary_short = &trunca($summary,30);
+     if ($url_text eq "[IMG]") { 
+       $url_text = $summary_short; 
+       $title_slug = &slug($url_text);
+     }
      &do_query("insert into entries values('','$foro','$category_slug','en','$url','$BASE','$url_text','$title_slug','$fecha','','$articulo','$summary')");
      push(@hechos,$url);
   }
@@ -197,7 +204,6 @@ sub ver_lista() {
 
 sub trunca() {
    my($string, $maxlength) = @_;
-   print "Entra en trunca con $tring \n maxsize = $maxlength\n"; 
    $string = substr($string, 0, $maxlength+1);
    die("Can't truncate, no spaces\n") if(index($string, ' ') == -1);
    return substr($string, 0, rindex($string, ' '))."...";
