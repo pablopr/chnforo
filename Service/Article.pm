@@ -88,6 +88,12 @@ sub get_articles_by_category{
   return @hash_ref_list;  
 }
 
+sub count_articles_by_category{
+  my $self = shift;
+  my $category_name = shift;
+  database->selectrow_array('SELECT count(*) from entradas where foro=?',undef,$category_name);
+}
+
 sub get_categories{
   my $self = shift;
   my $sth = database->prepare('SELECT distinct(foro) from entradas');
@@ -101,5 +107,37 @@ sub get_categories{
   return @hash_ref_list;  
 }
 
+sub get_paginated_articles_by_category {
+  my $self = shift;
+  my $category_name = shift;
+  my $page = shift;
+  my $num_per_page = shift;
+  my $cursor = ($page-1) * $num_per_page; 
+  my $sth = database->prepare("SELECT * FROM entradas where foro=? ORDER BY id DESC LIMIT ?,?"); 
+  $sth->execute($category_name,$cursor,$num_per_page+1);
+  
+  my @hash_ref_list= ();
+  while (my $row = $sth->fetchrow_hashref()) {
+  	push(@hash_ref_list,$row);
+  }
+    
+  return @hash_ref_list;  
+}
+
+sub get_paginated_articles {
+  my $self = shift;
+  my $page = shift;
+  my $num_per_page = shift;
+  my $cursor = ($page-1) * $num_per_page; 
+  my $sth = database->prepare("SELECT * FROM entradas ORDER BY id DESC LIMIT ?,?"); 
+  $sth->execute($cursor,$num_per_page+1);
+  
+  my @hash_ref_list= ();
+  while (my $row = $sth->fetchrow_hashref()) {
+  	push(@hash_ref_list,$row);
+  }
+    
+  return @hash_ref_list;  
+}
 
 1;

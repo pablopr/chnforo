@@ -4,6 +4,7 @@ use Dancer::Plugin::Database;
 use Template;
 use Service::Article;
 use HTML::Strip;
+use Data::Pageset::Render;
 require "utils.pl";
 
 our $VERSION = '0.1';
@@ -63,14 +64,30 @@ get '/article/view/:id' => sub {
         template 'article', $params;
     };
     
-get '/category/:name' => sub {
-	
-     my @articles = $article_service->get_articles_by_category(params->{name});
+get '/category/:name/:page' => sub {
+     
+     my $entries_per_page = 30;
+     my $category_name = params->{name};
+     
+     my $current_page = params->{page};
+     if (!$current_page > 0){
+     	     $current_page = 1;
+     }
+    
+     my $total_entries = $article_service->count_articles_by_category(
+     	     $category_name);
+     debug "############## tenemos: $total_entries /n";
+     
+     my @articles = $article_service->get_paginated_articles_by_category(
+     	     $category_name,$current_page,$entries_per_page);
      
      foreach my $article(@articles){
      	     my $text = &clean_text($article->{texto});
      	     $article->{texto} = $text;
      }
+     
+     my $url = "/category/$category_name/";
+     my $pager = &create_pagination($total_entries,$current_page,$entries_per_page,$url);
      
      my $seo_params = &create_seo_params(
         	params->{name},
@@ -82,7 +99,8 @@ get '/category/:name' => sub {
      	articles => vars->{articles},  
      	categories => vars->{categories} , 
      	main_articles => \@articles,
-     	seo => $seo_params
+     	seo => $seo_params,
+     	pager => $pager
      };
      
      template 'index', $params;
@@ -95,6 +113,22 @@ sub create_seo_params(){
 		keywords => $keywords,
 		description => $description
 	}
+}
+ 
+sub create_pagination(){
+	my ($total_entries,$current_page,$entries_per_page,$url) = @_;
+	
+	my $pager = Data::Pageset::Render->new( {
+			total_entries    => $total_entries,
+			entries_per_page => $entries_per_page,
+			current_page     => $current_page,
+			pages_per_set    => 50,
+			mode             => 'slider',
+			
+			link_format      => '<a href="'.$url.'%p">%a</a>',
+	} );
+	
+	return $pager->html();
 }
     
 true;

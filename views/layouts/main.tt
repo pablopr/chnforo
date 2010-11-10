@@ -43,7 +43,7 @@
 				
 				<ul class="list"> 
 				    <% FOREACH category IN categories %>
-				    	 <h3><a href="/category/<% category %>" title="<% category %>"><% category %></a></h3> 	
+				    	 <h3><a href="/category/<% category %>/1" title="<% category %>"><% category %></a></h3> 	
 				    <% END %>
                                 </ul> 
 				<!-- Column 3 end -->
