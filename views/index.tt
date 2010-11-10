@@ -2,7 +2,7 @@
 			<div class="col1">
 				
 				<!-- Column 1 start -->
-				<% FOREACH article IN random %>
+				<% FOREACH article IN main_articles %>
 					<h2><a href="/article/view/<% article.id %>" title="<% article.url_text %>"><% article.url_text %></a></h2>
 					<p> 
 					

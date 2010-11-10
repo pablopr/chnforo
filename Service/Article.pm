@@ -45,5 +45,32 @@ sub get_random_articles{
   return @hash_ref_list;  
 }
 
+sub get_articles_by_category{
+  my $self = shift;
+  my $category_name = shift;
+  my $sth = database->prepare('SELECT id,url_text,texto from entradas where foro=? order by fecha limit 20',);
+  $sth->execute($category_name);
+  my @hash_ref_list= ();
+  
+  while (my $row = $sth->fetchrow_hashref()) {
+  	push(@hash_ref_list,$row);
+  }
+    
+  return @hash_ref_list;  
+}
+
+sub get_categories{
+  my $self = shift;
+  my $sth = database->prepare('SELECT distinct(foro) from entradas');
+  $sth->execute();
+  my @hash_ref_list= ();
+  
+  while (my $row = $sth->fetchrow_hashref()) {
+  	  push(@hash_ref_list,$row->{foro});
+  }
+    
+  return @hash_ref_list;  
+}
+
 
 1;

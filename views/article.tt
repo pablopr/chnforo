@@ -1,10 +1,10 @@
 <div class="col1">
 				<!-- Column 1 start -->
-				<h2><% articulo.url_text %></h2>
+				<h2><% article.url_text %></h2>
 				
-				<p>Esta es la url original <% articulo.url %>.</p>
+				<p>Esta es la url original <% article.url %>.</p>
 				<h3>Mostrando el articulo <% params.id %></h3>
-				<p> <% texto %></p>
+				<div> <% article.texto %></div>
 				
 				<!-- Column 1 end -->
 			</div>
