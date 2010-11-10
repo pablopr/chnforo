@@ -7,9 +7,10 @@ use Lingua::Translate;
 my $lang = @ARGV[0];
 our $BASE = "http://www.ixdba.net";
 our $foro = "linux";
-my $first = "/a/os/linux/list_11_6.html";
+our $category_slug = &slug($foro);
+my $first = "/a/os/linux/";
 #my $first = "/";
-our @hechos = &get_lista_query("select url from entradas");
+our @hechos = &get_lista_query("select url from entries");
 our @seguidos;
 push (@hechos,$first);
 push (@hechos,$BASE);
@@ -22,7 +23,11 @@ print "Mostrando la lista de seguidos\n";
 &ver_lista(@seguidos);
 
 
-
+sub slug() {
+  my $text = shift;
+  $text =~s/ /_/g;
+  return $text;
+}
 
 sub process_url() {
   my $url2do = shift;
@@ -69,6 +74,7 @@ sub process_links() {
      my $url = $link->url();
      $url_text = $traductor->translate($url_text);
      $url_text =~s/】 【/ /gi;
+     my $title_slug = &slug($url_text);
      print "Link: $url,$url_text\n"; 
      if (($url =~ /http/) || (grep {$_ eq $url} @hechos) || !($url =~ /\.html/)) { 
         print "-- ERR: $url Rechazada por url\n"; next; 
@@ -78,15 +84,37 @@ sub process_links() {
      $content = $mech_link->content;
      $articulo = &get_content($content);
      if ($articulo eq "empty") { print "--ERR: Rechazada $url por falta de contenido\n";next; }
-     $content_5000 = substr($articulo,0,4999);
-     $content = $traductor->translate($content_5000);
-     $content =~s/'/''/g;
+     my $art_size = length($articulo); 
+     print "El articulo tiene $art_size size\n";
+     my $max_google_text = 4999;
+     if ($art_size > $max_google_text) {
+       print "*** Entrando en articulo mayor de 5000, size: $art_size\n";
+       my $articulo_tmp,$articulo_truncate;  
+       for($x=0;$x<$art_size;$x=$x+$max_google_text) {
+          print "*** Entra en el for truncando articulo desde $x\n";
+          $articulo_truncate = substr($articulo,$x,$max_google_text);
+          $articulo_tmp = $articulo_tmp . $traductor->translate($articulo_truncate);
+          sleep(1);
+       } 
+       $articulo = $articulo_tmp; 
+     }
+     else { $articulo = $traductor->translate($articulo); }
+     $articulo =~s/'/''/g;
+     # Quito el principio basura de ixdba.net (solo para esta web)
+     $articulo = &limpia_ixdba($articulo);
      $fecha = &get_fecha($url);
-     &do_query("insert into entradas values('','$foro','en','$url','$url_text','$fecha','','$content')");
+     my $summary = &get_html2text($articulo);
+     $summary = &trunca($summary,300);
+     &do_query("insert into entries values('','$foro','$category_slug','en','$url','$BASE','$url_text','$title_slug','$fecha','','$articulo','$summary')");
      push(@hechos,$url);
   }
 }
 
+sub limpia_ixdba() {
+  my $articulo = shift();
+  $articulo = substr($articulo,450,length($articulo));
+  return($articulo);
+}
 
 sub get_fecha() {
   my $url = shift;
@@ -129,6 +157,19 @@ sub get_content() {
 }
 
 
+sub get_html2text {
+  my $html = shift;
+  my $scraper = scraper {
+      process "table", "content[]" => 'TEXT'; 
+  };
+  my $content = $scraper->scrape($html);
+  
+   for my $tweet (@{$content->{content}}) {
+      return ($tweet);
+  }
+  return "empty"; 
+}
+
 sub config_googletr() {
   Lingua::Translate::config
      (
@@ -153,3 +194,12 @@ sub ver_lista() {
     print "Elemento $c: $elemento \n";$c++;
   }
 }
+
+sub trunca() {
+   my($string, $maxlength) = @_;
+   print "Entra en trunca con $tring \n maxsize = $maxlength\n"; 
+   $string = substr($string, 0, $maxlength+1);
+   die("Can't truncate, no spaces\n") if(index($string, ' ') == -1);
+   return substr($string, 0, rindex($string, ' '))."...";
+}
+
