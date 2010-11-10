@@ -12,11 +12,15 @@
 <body>
 
 <div id="header">
-	<p><a href="#" title="otro articulo">&laquo; Back to the other article</a></p>
 	<p id ="logo"><a href="/" title="chnforo home">Chnforo</a></p>
 	<h1><% seo.title %></h1>
 	
-	<p id="layoutdims">Tenemos que poner un buscador tb | Enlaces no en menu?: <a href="#">un enlace</a> | <a href="#">otro enlace</a> | <strong>label chula</strong></p>
+	<p id="layoutdims">  
+		<a href="/">Home</a>  
+		<a href="#">Tags</a>   
+		<a href="#">Categories</a>  
+		<a href="#">Sitemap</a>
+	</p>
 </div>
 <div class="colmask threecol">
 	<div class="colmid">
