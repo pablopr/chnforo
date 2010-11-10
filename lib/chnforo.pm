@@ -39,26 +39,35 @@ get '/' => sub {
      template 'index', $params;
 };
 
-get '/article/view/:id' => sub {
-
-        my $article = $article_service->get_article_by_id(params->{id});
-        
-        my $seo_params = &create_seo_params(
-        	$article->{title},
-        	$article->{title},
-     	        $article->{title}
-     	        );
-        
-        my $params = { 
-        	articles => vars->{articles}, 
-        	categories => vars->{categories}, 
-        	article => $article,
-        	seo => $seo_params
-        };
-        
-        template 'article', $params;
-    };
+get '/sitemap/:page' => sub {
+     
+     my $entries_per_page = 30;
+     my $current_page = params->{page};
     
+     my $total_entries = $article_service->count_articles;
+     
+     my @articles = $article_service->get_paginated_articles($current_page,$entries_per_page);
+     
+     my $url = "/sitemap/";
+     my $pager = &create_pagination($total_entries,$current_page,$entries_per_page,$url);
+     
+     my $seo_params = &create_seo_params(
+        	"Sitemap",
+        	"Sitemap",
+     	        "Sitemap"
+     	        );
+       
+     my $params = { 
+     	articles => vars->{articles},  
+     	categories => vars->{categories} , 
+     	main_articles => \@articles,
+     	seo => $seo_params,
+     	pager => $pager
+     };
+     
+     template 'sitemap', $params;
+};
+
 get '/category/:name/:page' => sub {
      
      my $entries_per_page = 30;
@@ -71,7 +80,6 @@ get '/category/:name/:page' => sub {
     
      my $total_entries = $article_service->count_articles_by_category(
      	     $category_name);
-     debug "############## tenemos: $total_entries /n";
      
      my @articles = $article_service->get_paginated_articles_by_category(
      	     $category_name,$current_page,$entries_per_page);
@@ -95,7 +103,28 @@ get '/category/:name/:page' => sub {
      
      template 'index', $params;
 };
+
+get '/:title_slug/:id' => sub {
+
+        my $article = $article_service->get_article_by_id(params->{id});
+        
+        my $seo_params = &create_seo_params(
+        	$article->{title},
+        	$article->{title},
+     	        $article->{title}
+     	        );
+        
+        my $params = { 
+        	articles => vars->{articles}, 
+        	categories => vars->{categories}, 
+        	article => $article,
+        	seo => $seo_params
+        };
+        
+        template 'article', $params;
+    };
     
+
 sub create_seo_params(){
 	my ($title,$keywords,$description) = @_;
 	{
