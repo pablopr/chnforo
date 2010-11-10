@@ -23,11 +23,6 @@ before sub {
 get '/' => sub {
      my @random_articles = $article_service->get_random_articles;
      
-     foreach my $article(@random_articles){
-     	     my $text = &clean_text($article->{texto});
-     	     $article->{texto} = $text;
-     }
-     
      my $seo_params = &create_seo_params(
      	     "titulo general",
      	     "keywords de la home",
@@ -49,9 +44,9 @@ get '/article/view/:id' => sub {
         my $article = $article_service->get_article_by_id(params->{id});
         
         my $seo_params = &create_seo_params(
-        	$article->{url_text},
-        	$article->{url_text},
-     	        $article->{url_text}
+        	$article->{title},
+        	$article->{title},
+     	        $article->{title}
      	        );
         
         my $params = { 
@@ -80,11 +75,6 @@ get '/category/:name/:page' => sub {
      
      my @articles = $article_service->get_paginated_articles_by_category(
      	     $category_name,$current_page,$entries_per_page);
-     
-     foreach my $article(@articles){
-     	     my $text = &clean_text($article->{texto});
-     	     $article->{texto} = $text;
-     }
      
      my $url = "/category/$category_name/";
      my $pager = &create_pagination($total_entries,$current_page,$entries_per_page,$url);

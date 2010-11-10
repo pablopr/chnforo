@@ -32,7 +32,7 @@
 				<h2>Recent</h2>
 				 <ul class="list"> 
 				    <% FOREACH article IN articles %>
-				    	 <li><a href="/article/view/<% article.id %>" title="<% article.url_text %>"><% article.url_text %></a></li> 	 	
+				    	 <li><a href="/article/view/<% article.id %>" title="<% article.title %>"><% article.title %></a></li> 	 	
 				    <% END %>
                                 </ul> 
 				<!-- Column 2 end -->

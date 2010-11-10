@@ -3,10 +3,10 @@
 				
 				<!-- Column 1 start -->
 				<% FOREACH article IN main_articles %>
-					<h2><a href="/article/view/<% article.id %>" title="<% article.url_text %>"><% article.url_text %></a></h2>
+					<h2><a href="/article/view/<% article.id %>" title="<% article.title %>"><% article.title %></a></h2>
 					<p> 
 					
-					<% article.texto %>
+					<% article.summary %>
 		
 					</p>
 				<% END %>

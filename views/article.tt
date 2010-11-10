@@ -1,15 +1,15 @@
 <div class="col1">
 <!-- Column 1 start -->
-	<h2><% article.url_text %></h2>
+	<h2><% article.title %></h2>
 	
-	<div> <% article.texto %></div>
+	<div> <% article.content %></div>
 	
 	<div class="pagination">
 		<% IF article.prev.id %>
-			<a href="/article/view/<% article.prev.id %>" title="<% article.prev.url_text %>" class="left">&laquo; <% article.prev.url_text %></a>
+			<a href="/article/view/<% article.prev.id %>" title="<% article.prev.title %>" class="left">&laquo; <% article.prev.title %></a>
 		<% END %>
 		<% IF article.next.id %>
-			<a href="/article/view/<% article.next.id %>" title="<% article.next.url_text %>" class="right"> <% article.next.url_text %>&raquo;</a>
+			<a href="/article/view/<% article.next.id %>" title="<% article.next.title %>" class="right"> <% article.next.title %>&raquo;</a>
 		<% END %>
 	</div>
 
