@@ -176,4 +176,27 @@ img {
 .pagination .right{
 	float:right;
 }
+#searchform{
+	float: right;
+}
 
+#searchform #keyword {
+	background:none repeat scroll 0 0 #333333;
+	border:1px solid #333333;
+	color:#FFFFFF;
+	display:block;
+	float:left;
+	height:22px;
+	line-height:22px;
+	padding:0 3px;
+	width:150px;
+}
+
+#searchform #searchsubmit {
+	background:none repeat scroll 0 0 #333333;
+	border:1px solid #333333;
+	color:#FFFFFF;
+	display:block;
+	float:left;
+	height:22px;
+}

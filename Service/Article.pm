@@ -88,6 +88,20 @@ sub get_articles_by_category{
   return @hash_ref_list;  
 }
 
+sub find_articles_by_keyword{
+  my $self = shift;
+  my $keyword = shift;
+  my $sth = database->prepare('SELECT id,title,title_slug,summary from entries where title like ? order by created limit 30',);
+  $sth->execute('%'.$keyword.'%');
+  my @hash_ref_list= ();
+  
+  while (my $row = $sth->fetchrow_hashref()) {
+  	push(@hash_ref_list,$row);
+  }
+    
+  return @hash_ref_list;  
+}
+
 sub count_articles_by_category{
   my $self = shift;
   my $category_name = shift;
@@ -133,7 +147,7 @@ sub get_paginated_articles {
   my $page = shift;
   my $num_per_page = shift;
   my $cursor = ($page-1) * $num_per_page; 
-  my $sth = database->prepare("SELECT * FROM entries ORDER BY id DESC LIMIT ?,?"); 
+  my $sth = database->prepare("SELECT id,title,title_slug FROM entries ORDER BY id DESC LIMIT ?,?"); 
   $sth->execute($cursor,$num_per_page+1);
   
   my @hash_ref_list= ();

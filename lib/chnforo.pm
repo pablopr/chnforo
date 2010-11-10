@@ -124,6 +124,25 @@ get '/:title_slug/:id' => sub {
         template 'article', $params;
     };
     
+    post '/search' => sub {
+    	    my @articles = $article_service->find_articles_by_keyword(params->{keyword});	
+    	    
+    	    my $seo_params = &create_seo_params(
+        	params->{keyword},
+        	"Articles about ".params->{keyword},
+     	        "Articles about ".params->{keyword}
+     	        );
+       
+	     my $params = { 
+		articles => vars->{articles},  
+		categories => vars->{categories} , 
+		main_articles => \@articles,
+		seo => $seo_params
+	     };
+	     
+	     template 'index', $params
+    };
+    
 
 sub create_seo_params(){
 	my ($title,$keywords,$description) = @_;

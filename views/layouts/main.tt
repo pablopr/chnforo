@@ -15,12 +15,18 @@
 	<p id ="logo"><a href="/" title="chnforo home">Chnforo</a></p>
 	<h1><% seo.title %></h1>
 	
-	<p id="layoutdims">  
+	<div id="layoutdims">  
+		<div id="searchform">
+	        <form action="/search" id="searchform" method="post">
+				<input type="text" id="keyword" name="keyword" value="">
+				<input type="image" value="search" id="searchsubmit" src="/css/images/btn_search.png">
+	       </form>
+	       </div>
 		<a href="/">Home</a>  
 		<a href="#">Tags</a>   
 		<a href="#">Categories</a>  
 		<a href="/sitemap/1">Sitemap</a>
-	</p>
+	</div>
 </div>
 <div class="colmask threecol">
 	<div class="colmid">
