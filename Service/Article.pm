@@ -32,7 +32,7 @@ sub get_title_by_id{
   my $self = shift;
   my $id = shift;
    my $sth = database->prepare(
-            'select id,title from entries where id = ?',);
+            'select id,title,title_slug from entries where id = ?',);
   $sth->execute($id);
   $sth->fetchrow_hashref;
   
@@ -50,7 +50,7 @@ sub get_by_id{
 
 sub get_last_articles{
   my $self = shift;
-  my $sth = database->prepare('SELECT id,title from entries order by created limit 20');
+  my $sth = database->prepare('SELECT id,title,title_slug from entries order by created limit 20');
   $sth->execute();
   my @hash_ref_list= ();
   
@@ -63,7 +63,7 @@ sub get_last_articles{
 
 sub get_random_articles{
   my $self = shift;
-  my $sth = database->prepare('SELECT id,title,summary from entries order by rand() limit 30');
+  my $sth = database->prepare('SELECT id,title,title_slug,summary from entries order by rand() limit 30');
   $sth->execute();
   my @hash_ref_list= ();
   
@@ -77,7 +77,7 @@ sub get_random_articles{
 sub get_articles_by_category{
   my $self = shift;
   my $category_name = shift;
-  my $sth = database->prepare('SELECT id,title,summary from entries where category=? order by created limit 30',);
+  my $sth = database->prepare('SELECT id,title,title_slug,summary from entries where category=? order by created limit 30',);
   $sth->execute($category_name);
   my @hash_ref_list= ();
   
@@ -94,6 +94,10 @@ sub count_articles_by_category{
   database->selectrow_array('SELECT count(*) from entries where category=?',undef,$category_name);
 }
 
+sub count_articles{
+  my $self = shift;
+  database->selectrow_array('SELECT count(*) from entries');
+}
 sub get_categories{
   my $self = shift;
   my $sth = database->prepare('SELECT distinct(category) from entries');

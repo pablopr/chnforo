@@ -6,10 +6,10 @@
 	
 	<div class="pagination">
 		<% IF article.prev.id %>
-			<a href="/article/view/<% article.prev.id %>" title="<% article.prev.title %>" class="left">&laquo; <% article.prev.title %></a>
+			<a href="/<% article.title_slug %>/<% article.prev.id %>" title="<% article.prev.title %>" class="left">&laquo; <% article.prev.title %></a>
 		<% END %>
 		<% IF article.next.id %>
-			<a href="/article/view/<% article.next.id %>" title="<% article.next.title %>" class="right"> <% article.next.title %>&raquo;</a>
+			<a href="/<% article.title_slug %>/<% article.next.id %>" title="<% article.next.title %>" class="right"> <% article.next.title %>&raquo;</a>
 		<% END %>
 	</div>
 
