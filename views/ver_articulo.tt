@@ -8,27 +8,5 @@
 				
 				<!-- Column 1 end -->
 			</div>
-			<div class="col2">
-				<!-- Column 2 start -->
-				<h2>titulo h2</h2>
-				
-				<p>parrafo de contenido.</p>
-				<h2>titulo h2</h2>
-				
-				<p>parrafo de contenido.</p>
-				<h2>titulo h2</h2>
-				
-				<p>parrafo de contenido.</p>
-				<!-- Column 2 end -->
-			</div>
-			<div class="col3">
-				<!-- Column 3 start -->
-				
-				<h2>titulo h2</h2>
-				
-				<p>parrafo de contenido.</p>
-				<h3>titulo h3</h3>
-				<p>parrafo de contenido</p>
-				<!-- Column 3 end -->
-			</div>
+			
 

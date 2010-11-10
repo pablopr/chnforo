@@ -1,4 +1,6 @@
+			
 			<div class="col1">
+				
 				<!-- Column 1 start -->
 				<% FOREACH article IN random %>
 					<h2><a href="/article/view/<% article.id %>" title="<% article.url_text %>"><% article.url_text %></a></h2>
@@ -10,23 +12,4 @@
 				<% END %>
 				<!-- Column 1 end -->
 			</div>
-			<div class="col2">
-				<!-- Column 2 start -->
-				<h2>Recent</h2>
-				 <ul class="list"> 
-				    <% FOREACH article IN articles %>
-				    	 <li><a href="/article/view/<% article.id %>" title="<% article.url_text %>"><% article.url_text %></a></li> 	 	
-				    <% END %>
-                                </ul> 
-				<!-- Column 2 end -->
-			</div>
-			<div class="col3">
-				<!-- Column 3 start -->
-				
-				<h2>titulo h2</h2>
-				
-				<p>parrafo de contenido.</p>
-				<h3>titulo h3</h3>
-				<p>parrafo de contenido</p>
-				<!-- Column 3 end -->
-			</div>
+			

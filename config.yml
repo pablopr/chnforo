@@ -7,6 +7,7 @@ log: 'debug'
 engines:
         template_toolkit:
             EVAL_PERL: 1
+            ENCODING: utf8
             
 plugins:
         Database:

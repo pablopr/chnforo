@@ -10,17 +10,20 @@ our $VERSION = '0.1';
 
 my $article_service = new Service::Article();
 
+before sub {
+	my @articles = $article_service->get_last_articles; 
+        var articles => \@articles;
+};
+
 get '/' => sub {
-     my @articles = $article_service->get_last_articles;
-     
      my @random_articles = $article_service->get_random_articles;
      
      foreach my $article(@random_articles){
-     	     my $text = &clean_text($article->{texto},100);
+     	     my $text = &clean_text($article->{texto});
      	     $article->{texto} = $text;
      }
      
-     template 'index', { articles => \@articles , random => \@random_articles};
+     template 'index', { articles => vars->{articles} , random => \@random_articles};
 };
 
 get '/article/view/:id' => sub {
@@ -29,9 +32,8 @@ get '/article/view/:id' => sub {
         
         my $texto = $article->{texto};
         $texto =~ s/Reproduced in the form of a hyperlink when you identify the source and author information in the article and the statement//;
-        template 'ver_articulo', { texto => $texto, articulo => $article };
+        template 'ver_articulo', { articles => vars->{articles}, texto => $texto, articulo => $article };
     };
     
     
-
 true;

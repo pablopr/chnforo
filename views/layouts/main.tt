@@ -13,15 +13,36 @@
 
 <div id="header">
 	<p><a href="#" title="otro articulo">&laquo; Back to the other article</a></p>
-	<h1>Chnforo (forums from China)</h1>
+	<h1><a href="/" title="chnforo home">Chnforo</a></h1>
 	<h2>poner algo chulo aqui.</h2>
 	
-	<p id="layoutdims">Enlaces no en menu?: <a href="#">un enlace</a> | <a href="#">otro enlace</a> | <strong>label chula</strong></p>
+	<p id="layoutdims">Tenemos que poner un buscador tb | Enlaces no en menu?: <a href="#">un enlace</a> | <a href="#">otro enlace</a> | <strong>label chula</strong></p>
 </div>
 <div class="colmask threecol">
 	<div class="colmid">
 		<div class="colleft">
+		        
 			<% content %>
+			<div class="col2">
+				<!-- Column 2 start -->
+				<h2>Recent</h2>
+				 <ul class="list"> 
+				    <% FOREACH article IN articles %>
+				    	 <li><a href="/article/view/<% article.id %>" title="<% article.url_text %>"><% article.url_text %></a></li> 	 	
+				    <% END %>
+                                </ul> 
+				<!-- Column 2 end -->
+			</div>
+			<div class="col3">
+				<!-- Column 3 start -->
+				
+				<h2>titulo h2</h2>
+				
+				<p>parrafo de contenido.</p>
+				<h3>titulo h3</h3>
+				<p>parrafo de contenido</p>
+				<!-- Column 3 end -->
+			</div>
 		</div>
 	</div>
 </div>
