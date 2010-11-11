@@ -6,9 +6,9 @@ use WWW::Mechanize;
 use Lingua::Translate;
 my $lang = @ARGV[0];
 our $BASE = "http://www.ixdba.net";
-our $foro = "Load Balancing";
+our $foro = "BLOG";
 our $category_slug = &slug($foro);
-my $first = "/a/lb/";
+my $first = "/article/ITXinWen";
 #my $first = "/";
 our @hechos = &get_lista_query("select url from entries");
 our @seguidos;
@@ -38,7 +38,7 @@ sub process_url() {
   $mech->get($BASE.$url2do);
   sleep(1);
   #my @links = $mech->find_all_links( tag => "a", text_regex => qr/linux/i );
-  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/lb/i);
+  my @links = $mech->find_all_links( tag => "a", url_regex => qr/^\/article/i);
   #&ver_links(@links);die;
   &process_links(@links);
   foreach $link (@links) {
@@ -103,10 +103,14 @@ sub process_links() {
      else { $articulo = $traductor->translate($articulo); }
      $articulo =~s/'/''/g;
      # Quito el principio basura de ixdba.net (solo para esta web)
-     $articulo = &limpia_ixdba($articulo);
+     #$articulo = &limpia_ixdba($articulo);
      $fecha = &get_fecha($url);
      my $summary = &get_html2text($articulo);
+     print "Articulo final = $articulo\n";
+     print "Summary antes de trunca = $summary\n";
+     print "Url_text = $url_text\n";
      $summary = &trunca($summary,300);
+     if ($summary eq "empty") { next; } 
      my $summary_short = &trunca($summary,30);
      if ($url_text eq "[IMG]") { 
        $url_text = $summary_short; 
@@ -153,59 +157,62 @@ sub url_invalida() {
 sub get_content() {
   my $html = shift;
   my $scraper = scraper {
-      process "div.content", "content[]" => 'HTML'; 
+      #process "div.content", "content[]" => 'HTML';
+       process "div", "content[]" => 'HTML';
   };
   my $content = $scraper->scrape($html);
   
    for my $tweet (@{$content->{content}}) {
-      return ($tweet);
-  }
-  return "empty"; 
+   print "Content = $tweet\n";
+   return ($tweet);
+}
+return "empty"; 
 }
 
 
 sub get_html2text {
-  my $html = shift;
-  my $scraper = scraper {
-      process "table", "content[]" => 'TEXT'; 
-  };
-  my $content = $scraper->scrape($html);
-  
-   for my $tweet (@{$content->{content}}) {
-      return ($tweet);
-  }
-  return "empty"; 
+my $html = shift;
+my $scraper = scraper {
+#process "table", "content[]" => 'TEXT';
+process "p", "content[]" => 'TEXT'; 
+};
+my $content = $scraper->scrape($html);
+
+for my $tweet (@{$content->{content}}) {
+return ($tweet);
+}
+return "empty"; 
 }
 
 sub config_googletr() {
-  Lingua::Translate::config
-     (
-         back_end => 'Google',
-         #api_key  => '',
-         referer  => 'http://www.imaginasoft.com/translate/',
-         format   => 'text',
-         userip   => '192.168.1.1',
-     );
+Lingua::Translate::config
+(
+ back_end => 'Google',
+ #api_key  => '',
+ referer  => 'http://www.imaginasoft.com/translate/',
+ format   => 'text',
+ userip   => '192.168.1.1',
+);
 
-  my $googletr = Lingua::Translate->new( src => 'zh-CN', dest => 'en' );
-  return ($googletr);
+my $googletr = Lingua::Translate->new( src => 'zh-CN', dest => 'en' );
+return ($googletr);
 }
 
 
 sub ver_lista() {
-  my @lista = @_;
-  my $cuantos = @lista;
-  my $c = 1;
-  print "La lista tiene $cuantos elementos\n";
-  foreach my $elemento (@lista) {
-    print "Elemento $c: $elemento \n";$c++;
-  }
+my @lista = @_;
+my $cuantos = @lista;
+my $c = 1;
+print "La lista tiene $cuantos elementos\n";
+foreach my $elemento (@lista) {
+print "Elemento $c: $elemento \n";$c++;
+}
 }
 
 sub trunca() {
-   my($string, $maxlength) = @_;
-   $string = substr($string, 0, $maxlength+1);
-   die("Can't truncate, no spaces\n") if(index($string, ' ') == -1);
+my($string, $maxlength) = @_;
+$string = substr($string, 0, $maxlength+1);
+return("empty\n") if(index($string, ' ') == -1);
    return substr($string, 0, rindex($string, ' '))."...";
 }
 

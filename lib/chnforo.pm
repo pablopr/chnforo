@@ -24,9 +24,9 @@ get '/' => sub {
      my @random_articles = $article_service->get_random_articles;
      
      my $seo_params = &create_seo_params(
-     	     "titulo general",
-     	     "keywords de la home",
-     	     "descripcion general de chnforo"
+     	     "Bring Knowledge To You",
+     	     "linux,oracle,web,IT,mysql,databases",
+     	     "One Repository for technical documents about Linux, Mysql, Oracle, Open Source, etc. "
      	     );
      
      my $params = { 
