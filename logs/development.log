@@ -1,0 +1,418 @@
+[4758]  core @0.000011> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[4758]  core @0.008156> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[4758]  core @0.000110> request: GET / from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[4758] debug @0.000436> [hit #1] trying to match `/' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[4758]  core @0.000535> [hit #1]   --> got 1 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[4758]  core @0.001528> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[4758]  core @0.000126> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[4758]  core @0.022107> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[4758]  core @0.000091> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[4758]  core @0.000507> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[4758]  core @0.000124> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[4758]  core @0.000528> [hit #4] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000011> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5060]  core @0.008092> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5060]  core @0.000131> request: GET /hello/roberto from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060] debug @0.000517> [hit #1] trying to match `/hello/roberto' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060] debug @0.000676> [hit #1] trying to match `/hello/roberto' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060]  core @0.001000> [hit #1]   --> got roberto in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5060]  core @0.001126> [hit #1]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5060]  core @0.001491> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000122> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060]  core @0.020947> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000130> request: GET /hello/david from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060] debug @0.000484> [hit #3] trying to match `/hello/david' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060] debug @0.000648> [hit #3] trying to match `/hello/david' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060]  core @0.000790> [hit #3]   --> got david in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5060]  core @0.000909> [hit #3]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5060]  core @0.001301> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000123> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060]  core @0.000527> [hit #4] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000116> request: GET /hello/hello from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060] debug @0.000420> [hit #5] trying to match `/hello/hello' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060] debug @0.000544> [hit #5] trying to match `/hello/hello' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060]  core @0.000648> [hit #5]   --> got hello in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5060]  core @0.000728> [hit #5]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5060]  core @0.001021> [hit #5] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000123> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060]  core @0.000523> [hit #6] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000125> request: GET /hello/$hello from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060] debug @0.000489> [hit #7] trying to match `/hello/$hello' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060] debug @0.000655> [hit #7] trying to match `/hello/$hello' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060]  core @0.000795> [hit #7]   --> got $hello in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5060]  core @0.000912> [hit #7]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5060]  core @0.001303> [hit #7] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000147> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060]  core @0.000550> [hit #8] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000111> request: GET /hello/roberto from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060] debug @0.000392> [hit #9] trying to match `/hello/roberto' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060] debug @0.000514> [hit #9] trying to match `/hello/roberto' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060]  core @0.000617> [hit #9]   --> got roberto in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5060]  core @0.000698> [hit #9]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5060]  core @0.000998> [hit #9] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000124> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060]  core @0.000524> [hit #10] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000089> request: GET /hello/roberto/alfredo from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060] debug @0.000315> [hit #11] trying to match `/hello/roberto/alfredo' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060] debug @0.000407> [hit #11] trying to match `/hello/roberto/alfredo' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060]  core @0.000666> [hit #11] response: 404 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000091> request: GET /css/error.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060]  core @0.000385> [hit #12] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000171> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060]  core @0.000732> [hit #13] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000129> request: GET /hello/roberto from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060] debug @0.000413> [hit #14] trying to match `/hello/roberto' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060] debug @0.000530> [hit #14] trying to match `/hello/roberto' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5060]  core @0.000624> [hit #14]   --> got roberto in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5060]  core @0.000701> [hit #14]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5060]  core @0.000996> [hit #14] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5060]  core @0.000126> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5060]  core @0.000528> [hit #15] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5471]  core @0.000011> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5471]  core @0.033655> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5471]  core @0.000088> request: GET /hello/roberto from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5471] debug @0.000312> [hit #1] trying to match `/hello/roberto' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5471] debug @0.000389> [hit #1] trying to match `/hello/roberto' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5471]  core @0.000456> [hit #1]   --> got roberto in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5471]  core @0.000512> [hit #1]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5471]  core @0.001037> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5471]  core @0.000109> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5471]  core @0.022051> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5471]  core @0.000190> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5471]  core @0.000670> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5475]  core @0.000012> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5475]  core @0.008242> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5475]  core @0.000090> request: GET /hello/roberto from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5475] debug @0.000324> [hit #1] trying to match `/hello/roberto' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5475] debug @0.000407> [hit #1] trying to match `/hello/roberto' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5475]  core @0.000479> [hit #1]   --> got roberto in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5475]  core @0.000540> [hit #1]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5475]  core @0.001095> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5475]  core @0.000110> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5475]  core @0.016664> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5475]  core @0.000115> request: GET /hello/roberto from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5475] debug @0.000416> [hit #3] trying to match `/hello/roberto' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5475] debug @0.000541> [hit #3] trying to match `/hello/roberto' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5475]  core @0.000645> [hit #3]   --> got roberto in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5475]  core @0.000733> [hit #3]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5475]  core @0.001487> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5475]  core @0.000115> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5475]  core @0.000455> [hit #4] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5475]  core @0.000172> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5475]  core @0.000718> [hit #5] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5475]  core @0.000169> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5475]  core @0.000763> [hit #6] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5514]  core @0.000012> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5514]  core @0.008612> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5514]  core @0.000094> request: GET /hello/roberto from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5514] debug @0.000339> [hit #1] trying to match `/hello/roberto' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5514] debug @0.000425> [hit #1] trying to match `/hello/roberto' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5514]  core @0.000509> [hit #1]   --> got roberto in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5514]  core @0.000570> [hit #1]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5514]  core @0.001134> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5514]  core @0.000115> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5514]  core @0.015359> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5514]  core @0.000128> request: GET /hello/roberto from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5514] debug @0.000486> [hit #3] trying to match `/hello/roberto' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5514] debug @0.000622> [hit #3] trying to match `/hello/roberto' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5514]  core @0.000694> [hit #3]   --> got roberto in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5514]  core @0.000754> [hit #3]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5514]  core @0.001346> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5514]  core @0.000111> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5514]  core @0.000449> [hit #4] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5514]  core @0.000174> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5514]  core @0.000717> [hit #5] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5514]  core @0.000125> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5514]  core @0.000525> [hit #6] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5579]  core @0.000011> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5579]  core @0.008264> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5579]  core @0.000091> request: GET /hello/roberto from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5579] debug @0.000327> [hit #1] trying to match `/hello/roberto' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5579] debug @0.000410> [hit #1] trying to match `/hello/roberto' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5579]  core @0.000483> [hit #1]   --> got roberto in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5579]  core @0.000544> [hit #1]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5579]  core @0.001120> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5579]  core @0.000114> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5579]  core @0.020917> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5579]  core @0.000125> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5579]  core @0.000531> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[4844]  core @0.000020> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[4844]  core @0.069689> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[4845]  core @0.000013> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[4845]  core @0.008713> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[4845]  core @0.000091> request: GET / from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[4845] debug @0.000317> [hit #1] trying to match `/' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[4845]  core @0.000387> [hit #1]   --> got 1 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[4845]  core @0.016818> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[4845]  core @0.000090> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[4845]  core @0.022144> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[4845]  core @0.000103> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[4845]  core @0.000461> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[4845]  core @0.000127> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[4845]  core @0.000531> [hit #4] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5291]  core @0.000012> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5291]  core @0.040451> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5291]  core @0.000093> request: GET / from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5291] debug @0.000331> [hit #1] trying to match `/' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5291]  core @0.000407> [hit #1]   --> got 1 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5291]  core @0.001143> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5291]  core @0.000090> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5291]  core @0.016619> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5291]  core @0.000127> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5291]  core @0.000536> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5291]  core @0.000131> request: GET /hello/roberto from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5291] debug @0.000517> [hit #4] trying to match `/hello/roberto' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5291] debug @0.000664> [hit #4] trying to match `/hello/roberto' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5291]  core @0.000833> [hit #4]   --> got roberto in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5291]  core @0.000956> [hit #4]   --> named tokens are: name in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5291]  core @0.002096> [hit #4] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5291]  core @0.000093> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5291]  core @0.000348> [hit #5] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5291]  core @0.000125> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5291]  core @0.000535> [hit #6] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5291]  core @0.000128> request: GET /articulo/view/1 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5291] debug @0.000468> [hit #7] trying to match `/articulo/view/1' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5291] debug @0.000598> [hit #7] trying to match `/articulo/view/1' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5291] debug @0.000715> [hit #7] trying to match `/articulo/view/1' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5291]  core @0.000837> [hit #7]   --> got 1 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5291]  core @0.000922> [hit #7]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5291]  core @0.090916> [hit #7] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5291]  core @0.000086> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5291]  core @0.000324> [hit #8] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5291]  core @0.000178> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5291]  core @0.000783> [hit #9] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5291]  core @0.000092> request: GET /articulo/view/266 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5291] debug @0.000328> [hit #10] trying to match `/articulo/view/266' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5291] debug @0.000420> [hit #10] trying to match `/articulo/view/266' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5291] debug @0.000498> [hit #10] trying to match `/articulo/view/266' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5291]  core @0.000569> [hit #10]   --> got 266 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5291]  core @0.000629> [hit #10]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5291]  core @0.018992> [hit #10] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5291]  core @0.000091> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5291]  core @0.000350> [hit #11] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5291]  core @0.000125> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5291]  core @0.000574> [hit #12] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000012> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5296]  core @0.020920> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5296]  core @0.000088> request: GET /articulo/view/266 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296] debug @0.000317> [hit #1] trying to match `/articulo/view/266' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000481> [hit #1] trying to match `/articulo/view/266' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000648> [hit #1] trying to match `/articulo/view/266' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296]  core @0.000792> [hit #1]   --> got 266 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5296]  core @0.000911> [hit #1]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5296]  core @0.027848> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000089> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.018699> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000126> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000554> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000130> request: GET /articulo/view/265 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296] debug @0.000517> [hit #4] trying to match `/articulo/view/265' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000748> [hit #4] trying to match `/articulo/view/265' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000995> [hit #4] trying to match `/articulo/view/265' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296]  core @0.001199> [hit #4]   --> got 265 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5296]  core @0.001416> [hit #4]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5296]  core @0.003379> [hit #4] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000112> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000458> [hit #5] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000124> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000527> [hit #6] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000130> request: GET /articulo/view/264 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296] debug @0.000485> [hit #7] trying to match `/articulo/view/264' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000648> [hit #7] trying to match `/articulo/view/264' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000799> [hit #7] trying to match `/articulo/view/264' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296]  core @0.000936> [hit #7]   --> got 264 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5296]  core @0.001053> [hit #7]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5296]  core @0.002832> [hit #7] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000088> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000335> [hit #8] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000176> request: GET /articulo/view/261 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296] debug @0.000667> [hit #9] trying to match `/articulo/view/261' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000902> [hit #9] trying to match `/articulo/view/261' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.001134> [hit #9] trying to match `/articulo/view/261' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296]  core @0.001338> [hit #9]   --> got 261 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5296]  core @0.001535> [hit #9]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5296]  core @0.004013> [hit #9] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000109> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000446> [hit #10] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000066> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000263> [hit #11] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000125> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000524> [hit #12] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000134> request: GET /articulo/view/260 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296] debug @0.000502> [hit #13] trying to match `/articulo/view/260' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000667> [hit #13] trying to match `/articulo/view/260' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000841> [hit #13] trying to match `/articulo/view/260' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296]  core @0.001009> [hit #13]   --> got 260 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5296]  core @0.001158> [hit #13]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5296]  core @0.003196> [hit #13] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000088> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000338> [hit #14] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000109> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000459> [hit #15] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000174> request: GET /articulo/view/120 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296] debug @0.000673> [hit #16] trying to match `/articulo/view/120' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000915> [hit #16] trying to match `/articulo/view/120' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.001144> [hit #16] trying to match `/articulo/view/120' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296]  core @0.001376> [hit #16]   --> got 120 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5296]  core @0.001557> [hit #16]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5296]  core @0.003798> [hit #16] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000092> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000365> [hit #17] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000129> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000535> [hit #18] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000181> request: GET /articulo/view/200 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296] debug @0.000712> [hit #19] trying to match `/articulo/view/200' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000951> [hit #19] trying to match `/articulo/view/200' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.001129> [hit #19] trying to match `/articulo/view/200' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296]  core @0.001272> [hit #19]   --> got 200 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5296]  core @0.001390> [hit #19]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5296]  core @0.003425> [hit #19] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000121> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000475> [hit #20] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000127> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000558> [hit #21] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000126> request: GET /articulo/view/201 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296] debug @0.000482> [hit #22] trying to match `/articulo/view/201' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000647> [hit #22] trying to match `/articulo/view/201' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296] debug @0.000819> [hit #22] trying to match `/articulo/view/201' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5296]  core @0.000957> [hit #22]   --> got 201 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5296]  core @0.001075> [hit #22]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5296]  core @0.003767> [hit #22] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000087> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000325> [hit #23] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5296]  core @0.000127> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5296]  core @0.000532> [hit #24] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5355]  core @0.000012> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5355]  core @0.022955> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5355]  core @0.000090> request: GET /articulo/view/201 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5355] debug @0.000321> [hit #1] trying to match `/articulo/view/201' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5355] debug @0.000405> [hit #1] trying to match `/articulo/view/201' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5355] debug @0.000476> [hit #1] trying to match `/articulo/view/201' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5355]  core @0.000542> [hit #1]   --> got 201 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5355]  core @0.000604> [hit #1]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5355]  core @0.023252> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5355]  core @0.000114> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5355]  core @0.019391> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5355]  core @0.000168> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5355]  core @0.000594> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5465]  core @0.000012> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5467]  core @0.000015> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5468]  core @0.000012> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5471]  core @0.000012> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5471]  core @0.043703> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5472]  core @0.000011> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5472]  core @0.023522> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5472]  core @0.000091> request: GET /articulo/view/201 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5472] debug @0.000324> [hit #1] trying to match `/articulo/view/201' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5472] debug @0.000408> [hit #1] trying to match `/articulo/view/201' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5472] debug @0.000485> [hit #1] trying to match `/articulo/view/201' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5472]  core @0.000556> [hit #1]   --> got 201 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5472]  core @0.000616> [hit #1]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5472]  core @0.130588> [hit #1] response:  in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5472]  core @0.000089> request: GET /css/error.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5472]  core @0.051791> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5472]  core @0.000128> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5472]  core @0.000535> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5478]  core @0.000016> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5478]  core @0.022961> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5478]  core @0.000091> request: GET /articulo/view/201 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5478] debug @0.000326> [hit #1] trying to match `/articulo/view/201' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5478] debug @0.000409> [hit #1] trying to match `/articulo/view/201' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5478] debug @0.000485> [hit #1] trying to match `/articulo/view/201' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5478]  core @0.000557> [hit #1]   --> got 201 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5478]  core @0.000616> [hit #1]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5478]  core @0.051632> [hit #1] response:  in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5478]  core @0.000093> request: GET /css/error.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5478]  core @0.016508> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5478]  core @0.000125> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5478]  core @0.000551> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5478]  core @0.000111> request: GET /articulo/view/201 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5478] debug @0.000406> [hit #4] trying to match `/articulo/view/201' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5478] debug @0.000532> [hit #4] trying to match `/articulo/view/201' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5478] debug @0.000641> [hit #4] trying to match `/articulo/view/201' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5478]  core @0.000740> [hit #4]   --> got 201 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5478]  core @0.000825> [hit #4]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5478]  core @0.005142> [hit #4] response:  in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5478]  core @0.000101> request: GET /css/error.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5478]  core @0.000442> [hit #5] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5478]  core @0.000127> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5478]  core @0.000566> [hit #6] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5478]  core @0.000409> request: GET /articulo/view/202 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5478] debug @0.002320> [hit #7] trying to match `/articulo/view/202' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5478] debug @0.002520> [hit #7] trying to match `/articulo/view/202' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5478] debug @0.002723> [hit #7] trying to match `/articulo/view/202' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5478]  core @0.002925> [hit #7]   --> got 202 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5478]  core @0.003123> [hit #7]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5478]  core @0.025406> [hit #7] response:  in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5478]  core @0.000086> request: GET /css/error.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5478]  core @0.000333> [hit #8] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5478]  core @0.000128> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5478]  core @0.000536> [hit #9] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5517]  core @0.000012> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5518]  core @0.000011> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5518]  core @0.025517> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5518]  core @0.000094> request: GET /articulo/view/202 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5518] debug @0.000336> [hit #1] trying to match `/articulo/view/202' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5518] debug @0.000424> [hit #1] trying to match `/articulo/view/202' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5518] debug @0.000501> [hit #1] trying to match `/articulo/view/202' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5518]  core @0.000573> [hit #1]   --> got 202 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5518]  core @0.000633> [hit #1]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5518]  core @0.027988> [hit #1] response:  in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5518]  core @0.000089> request: GET /css/error.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5518]  core @0.025611> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5518]  core @0.000128> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5518]  core @0.000794> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5522]  core @0.000011> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5522]  core @0.022754> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5522]  core @0.000091> request: GET /articulo/view/202 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5522] debug @0.000326> [hit #1] trying to match `/articulo/view/202' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5522] debug @0.000412> [hit #1] trying to match `/articulo/view/202' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5522] debug @0.000489> [hit #1] trying to match `/articulo/view/202' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5522]  core @0.000580> [hit #1]   --> got 202 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5522]  core @0.000669> [hit #1]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5522]  core @0.036798> [hit #1] response:  in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5522]  core @0.000089> request: GET /css/error.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5522]  core @0.020138> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5522]  core @0.000127> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5522]  core @0.000537> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5524]  core @0.000011> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5524]  core @0.023444> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5524]  core @0.000124> request: GET /articulo/view/202 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5524] debug @0.000460> [hit #1] trying to match `/articulo/view/202' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5524] debug @0.000594> [hit #1] trying to match `/articulo/view/202' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5524] debug @0.000708> [hit #1] trying to match `/articulo/view/202' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5524]  core @0.000813> [hit #1]   --> got 202 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5524]  core @0.000904> [hit #1]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5524]  core @0.025056> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5524]  core @0.000110> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5524]  core @0.020668> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5524]  core @0.000126> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5524]  core @0.000527> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5525]  core @0.000012> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5526]  core @0.000012> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5527]  core @0.000023> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5527]  core @0.061768> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5527]  core @0.000171> request: GET /articulo/view/202 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5527] debug @0.000564> [hit #1] trying to match `/articulo/view/202' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5527] debug @0.000730> [hit #1] trying to match `/articulo/view/202' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5527] debug @0.000886> [hit #1] trying to match `/articulo/view/202' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5527]  core @0.001031> [hit #1]   --> got 202 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5527]  core @0.001150> [hit #1]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5527]  core @0.032981> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5527]  core @0.000091> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5527]  core @0.021497> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5527]  core @0.000183> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5527]  core @0.000813> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5529]  core @0.000011> loading application chnforo in /usr/local/share/perl/5.10.1/Dancer.pm l. 179
+[5529]  core @0.023302> loading Standalone handler in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 29
+[5529]  core @0.000090> request: GET /articulo/view/202 from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5529] debug @0.000328> [hit #1] trying to match `/articulo/view/202' against /^\/$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5529] debug @0.000417> [hit #1] trying to match `/articulo/view/202' against /^\/hello\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5529] debug @0.000495> [hit #1] trying to match `/articulo/view/202' against /^\/articulo\/view\/([^\/]+)$/ in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 73
+[5529]  core @0.000567> [hit #1]   --> got 202 in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 79
+[5529]  core @0.000636> [hit #1]   --> named tokens are: id in /usr/local/share/perl/5.10.1/Dancer/Route.pm l. 98
+[5529]  core @0.024489> [hit #1] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5529]  core @0.000124> request: GET /css/style.css from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5529]  core @0.020339> [hit #2] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
+[5529]  core @0.000126> request: GET /favicon.ico from 127.0.0.1 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 44
+[5529]  core @0.000527> [hit #3] response: 200 in /usr/local/share/perl/5.10.1/Dancer/Handler.pm l. 102
