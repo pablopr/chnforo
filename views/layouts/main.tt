@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
 <head>
-	<title>ChnForo poner un title.</title>
+	<title><% seo.title %> | Chnforo</title>
 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<meta name="description" content="<% seo.description %>" />
+	<meta name="keywords" content="<% seo.keywords %>" />
 	<meta name="robots" content="index, follow" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" />
@@ -12,11 +12,21 @@
 <body>
 
 <div id="header">
-	<p><a href="#" title="otro articulo">&laquo; Back to the other article</a></p>
-	<h1><a href="/" title="chnforo home">Chnforo</a></h1>
-	<h2>poner algo chulo aqui.</h2>
+	<p id ="logo"><a href="/" title="chnforo home">Chnforo</a></p>
+	<h1><% seo.title %></h1>
 	
-	<p id="layoutdims">Tenemos que poner un buscador tb | Enlaces no en menu?: <a href="#">un enlace</a> | <a href="#">otro enlace</a> | <strong>label chula</strong></p>
+	<div id="layoutdims">  
+		<div id="searchform">
+	        <form action="/search" id="searchform" method="post">
+				<input type="text" id="keyword" name="keyword" value="">
+				<input type="image" value="search" id="searchsubmit" src="/css/images/btn_search.png">
+	       </form>
+	       </div>
+		<a href="/">Home</a>  
+		<a href="#">Tags</a>   
+		<a href="#">Categories</a>  
+		<a href="/sitemap/1">Sitemap</a>
+	</div>
 </div>
 <div class="colmask threecol">
 	<div class="colmid">
@@ -28,24 +38,23 @@
 				<h2>Recent</h2>
 				 <ul class="list"> 
 				    <% FOREACH article IN articles %>
-				    	 <li><a href="/article/view/<% article.id %>" title="<% article.url_text %>"><% article.url_text %></a></li> 	 	
+				    	 <li><a href="/<% article.title_slug %>/<% article.id %>" title="<% article.title %>"><% article.title %></a></li> 	 	
 				    <% END %>
                                 </ul> 
 				<!-- Column 2 end -->
 			</div>
 			<div class="col3">
 				<!-- Column 3 start -->
+				<h2>Categories</h2>
 				
-				<h2>titulo h2</h2>
-				
-				<p>parrafo de contenido.</p>
-				<h3>titulo h3</h3>
-				<p>parrafo de contenido</p>
+				    <% FOREACH category IN categories %>
+				    	 <h3><a href="/category/<% category %>/1" title="<% category %>"><% category %></a></h3> 	
+				    <% END %>
 				<!-- Column 3 end -->
 			</div>
 		</div>
 	</div>
 </div>
 <div id="footer">
-	<p>Made by <a href="#">Roberto</a> and <a href="#">Pablo</a>. </p>
+	<p>Created by <a href="#">Roberto</a> and <a href="#">Pablo</a>. </p>
 </div>

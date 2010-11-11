@@ -10,6 +10,7 @@ body {
 }
 a {
 	color:#369;
+	text-decoration:none;
 }
 a:hover {
 	color:#fff;
@@ -94,7 +95,13 @@ img {
 	border-top:4px solid #000;
 	margin:0;
 	padding:6px 15px !important;
-	text-align:right;
+	text-align:center;
+	font-size:18px;
+}
+
+#layoutdims a{
+	padding-left: 10px;	
+	padding-right: 10px;
 }
 /* column container */
 .colmask {
@@ -156,4 +163,40 @@ img {
 #footer p {
 	padding:10px;
 	margin:0;
+}
+
+/* Custom styles*/
+.pagination{
+	float:left;
+	width:100%;
+}
+.pagination .left{
+	float:left;
+}
+.pagination .right{
+	float:right;
+}
+#searchform{
+	float: right;
+}
+
+#searchform #keyword {
+	background:none repeat scroll 0 0 #333333;
+	border:1px solid #333333;
+	color:#FFFFFF;
+	display:block;
+	float:left;
+	height:22px;
+	line-height:22px;
+	padding:0 3px;
+	width:150px;
+}
+
+#searchform #searchsubmit {
+	background:none repeat scroll 0 0 #333333;
+	border:1px solid #333333;
+	color:#FFFFFF;
+	display:block;
+	float:left;
+	height:22px;
 }
