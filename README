@@ -1,1 +1,6 @@
 Aplicacion de traducción de foros chinos
+
+Instalar Dependencias:
+ sudo cpan Dancer
+ sudo cpan YAML
+ sudo cpan Template
