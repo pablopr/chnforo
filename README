@@ -4,3 +4,6 @@ Instalar Dependencias:
  sudo cpan Dancer
  sudo cpan YAML
  sudo cpan Template
+ sudo cpan Dancer::Plugin::Database
+ sudo cpan HTML::Strip
+ sudo cpan Data::Pageset::Render
