@@ -26,6 +26,7 @@ sub create_tags_from_string{
 sub extract_tags_from_text{
 	my $text = shift;
         $text =~s/ /_/g;
+        $text =~s/\.//g;
 	my @pieces = split(/_/,$text);
 	print "###### tenemos estas palabras @pieces \n";
 	my @tags = ();
