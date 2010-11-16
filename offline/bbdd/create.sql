@@ -282,3 +282,121 @@ CREATE TABLE entries_tr (
   content text,
   summary text,
   primary key (id));
+
+
+DROP TABLE IF EXISTS `tags_en`;
+CREATE TABLE tags_en (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+DROP TABLE IF EXISTS `tags_pt`;
+CREATE TABLE tags_pt (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_es`;
+CREATE TABLE tags_es (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_fr`;
+CREATE TABLE tags_fr (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_bg`;
+CREATE TABLE tags_bg (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_ca`;
+CREATE TABLE tags_ca (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_cs`;
+CREATE TABLE tags_cs (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_da`;
+CREATE TABLE tags_da (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_fi`;
+CREATE TABLE tags_fi (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_gl`;
+CREATE TABLE tags_gl (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_el`;
+CREATE TABLE tags_el (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_nl`;
+CREATE TABLE tags_nl (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_hu`;
+CREATE TABLE tags_hu (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_is`;
+CREATE TABLE tags_is (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_it`;
+CREATE TABLE tags_it (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_no`;
+CREATE TABLE tags_no (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_pl`;
+CREATE TABLE tags_pl (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_sv`;
+CREATE TABLE tags_sv (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+  DROP TABLE IF EXISTS `tags_tr`;
+CREATE TABLE tags_tr (
+  id int(10) unsigned not null auto_increment,
+  tag varchar(128) not null,
+  density int(10) unsigned not null,
+  primary key (id));
+
+ 

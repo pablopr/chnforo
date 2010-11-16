@@ -7,6 +7,7 @@ our $dbh = DBI->connect("dbi:mysql:$db", $user, $pass ) || die( $DBI::errstr . "
 
 sub do_query {
         my $query = shift;
+        print " $query \n";
         my $sth=$dbh->prepare($query);
         $sth->execute();
         $sth->finish();

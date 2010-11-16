@@ -61,6 +61,8 @@
 				    	 <li><a href="/<% lang %>/<% article.title_slug %>/<% article.id %>" title="<% article.title %>"><% article.title %></a></li> 	 	
 				    <% END %>
                                 </ul> 
+                                
+                                <% cloud_html %>
 				<!-- Column 2 end -->
 			</div>
 			<div class="col3">

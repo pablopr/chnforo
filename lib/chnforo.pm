@@ -5,6 +5,7 @@ use Template;
 use Service::Article;
 use HTML::Strip;
 use Data::Pageset::Render;
+use HTML::TagCloud;
 require "utils.pl";
 
 our $VERSION = '0.1';
@@ -96,6 +97,7 @@ get  qr{ /([a-z]{2})/category/(\w+)/([0-9]+)}x => sub {
      my $params = { 
      	articles => vars->{articles},  
      	categories => vars->{categories} , 
+     	cloud_html => vars->{cloud_html},
      	main_articles => \@articles,
      	seo => $seo_params,
      	pager => $pager,
@@ -127,6 +129,7 @@ get  qr{ /([a-z]{2})/(\w+)/([0-9]+)}x => sub {
         my $params = { 
         	articles => vars->{articles}, 
         	categories => vars->{categories}, 
+        	cloud_html => vars->{cloud_html},
         	article => $article,
         	seo => $seo_params,
         };
@@ -154,6 +157,7 @@ get  qr{ /([a-z]{2})/(\w+)/([0-9]+)}x => sub {
 	     my $params = { 
 		articles => vars->{articles},  
 		categories => vars->{categories} , 
+		cloud_html => vars->{cloud_html},
 		main_articles => \@articles,
 		seo => $seo_params,
 	     };
@@ -177,6 +181,7 @@ get  qr{ /([a-z]{2})/(\w+)/([0-9]+)}x => sub {
 	     my $params = { 
 		articles => vars->{articles},  
 		categories => vars->{categories} , 
+		cloud_html => vars->{cloud_html},
 		main_articles => \@random_articles,
 		seo => $seo_params
 	     };
@@ -201,6 +206,8 @@ sub prepare_lateral_menus(){
         
         my @categories = $article_service->get_categories;
         var categories => \@categories;
+        
+        var cloud_html => $article_service->get_tag_cloud_html;
 }
 
 #crea el paginador
