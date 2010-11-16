@@ -11,6 +11,14 @@ our $VERSION = '0.1';
 
 my $article_service = new Service::Article();
 
+before_template sub {
+	my $tokens = shift;
+	#metemos el idioma para todas las plantillas
+        $tokens->{lang} = $article_service->{lang};
+        my @languages =("en","pt","es","fr","bg","ca","cs","da","fi","gl","el","nl","hu","is","it","no","pl","sv","tr");
+        $tokens->{languages} = \@languages;
+};
+
 get '/' => sub {
 	&index_page;
 };
@@ -46,7 +54,6 @@ get  qr{ /([a-z]{2})/sitemap/([0-9]+)}x => sub {
      	main_articles => \@articles,
      	seo => $seo_params,
      	pager => $pager,
-        lang => $lang
      };
      
      template 'sitemap', $params;
@@ -92,7 +99,6 @@ get  qr{ /([a-z]{2})/category/(\w+)/([0-9]+)}x => sub {
      	main_articles => \@articles,
      	seo => $seo_params,
      	pager => $pager,
-        lang => $article_service->{lang}
      };
      
      template 'index', $params;
@@ -123,7 +129,6 @@ get  qr{ /([a-z]{2})/(\w+)/([0-9]+)}x => sub {
         	categories => vars->{categories}, 
         	article => $article,
         	seo => $seo_params,
-		lang => $article_service->{lang}
         };
         
         template 'article', $params;
@@ -151,7 +156,6 @@ get  qr{ /([a-z]{2})/(\w+)/([0-9]+)}x => sub {
 		categories => vars->{categories} , 
 		main_articles => \@articles,
 		seo => $seo_params,
-		lang => $lang
 	     };
 	     
 	     template 'index', $params
@@ -174,8 +178,7 @@ get  qr{ /([a-z]{2})/(\w+)/([0-9]+)}x => sub {
 		articles => vars->{articles},  
 		categories => vars->{categories} , 
 		main_articles => \@random_articles,
-		seo => $seo_params,
-		lang => $article_service->{lang}
+		seo => $seo_params
 	     };
 	     
 	     template 'index', $params;	    

@@ -27,7 +27,11 @@
 <body>
 
 <div id="header">
-        <p id ="lang"><a href="/en" title="chnforo languages">en</a>|<a href="/es" title="chnforo languages">es</a>|<a href="/fr" title="chnforo languages">fr</a></p>
+        <p id ="lang">
+           <% FOREACH language IN languages %>
+           	<a href="/<% language %>" title="chnforo languages"><% language %></a>|
+            <% END %>
+        </p>
 	<p id ="logo"><a href="/" title="chnforo home">Chnforo</a></p>
 	<h1><% seo.title %></h1>
 	
