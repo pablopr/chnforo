@@ -5,16 +5,14 @@ require ("dbInit.pl");
 use WWW::Mechanize;
 use Lingua::Translate;
 my $lang = @ARGV[0];
+our @langs = ("en","pt","es","fr","bg","ca","cs","da","fi","gl","el","nl","hu","is","it","no","pl","sv","tr");
 our $BASE = "http://www.ixdba.net";
-our $foro = "Load Balancing";
+our $foro = "Cluster Technology";
 our $category_slug = &slug($foro);
 my $first = "/a/lb/";
 #my $first = "/";
-our @hechos = &get_lista_query("select url from entries");
+our @hechos = &get_lista_query("select url from entries_en");
 our @seguidos;
-push (@hechos,$first);
-push (@hechos,$BASE);
-our $traductor = &config_googletr();
 my $mech = WWW::Mechanize->new( autocheck => 1 );
 &process_url($first);
 print "*** Mostrando la lista de hechos\n";
@@ -33,14 +31,15 @@ sub slug() {
 sub process_url() {
   my $url2do = shift;
   push(@seguidos,$url2do);
-  #&do_query("insert into seguidos values ('$url2do')");
   print "**** Entra a process_url($url2do)\n";
   $mech->get($BASE.$url2do);
   sleep(1);
   #my @links = $mech->find_all_links( tag => "a", text_regex => qr/linux/i );
   my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/lb/i);
   #&ver_links(@links);die;
-  &process_links(@links);
+  foreach my $lang (@langs) {
+     &process_links($lang,@links);
+  }
   foreach $link (@links) {
      $url = $link->url();
      print "Analizando url = $url\n"; 
@@ -64,8 +63,10 @@ sub ver_links() {
 }
 
 sub process_links() {
-  print "Entra en process_links\n";
   my $mech_link = WWW::Mechanize->new( autocheck => 1 );
+  my $lang = shift;
+  my $traductor = &config_googletr($lang);
+  print "Entra en process_links con idioma = $lang\n";
   my @links = @_;
   my $cuantos = @links;
   my $fecha = "2010-11-12";
@@ -78,13 +79,17 @@ sub process_links() {
      $url_text =~s/】 【/ /gi;
      my $title_slug = &slug($url_text);
      print "Link: $url,$url_text\n"; 
-     if (($url =~ /http/) || (grep {$_ eq $url} @hechos) || !($url =~ /\.html/)) { 
+     if (($url =~ /http/) || (grep {$_ eq $url."_$lang"} @hechos) || !($url =~ /\.html/)) { 
         print "-- ERR: $url Rechazada por url\n"; next; 
      }
      sleep(1);
      $mech_link->get($BASE.$url);
      $content = $mech_link->content;
      $articulo = &get_content($content);
+     # Quito el principio basura de ixdba.net (solo para esta web)
+     $basura = substr($articulo,0,499);
+     $articulo = substr($articulo,499,length($articulo));
+     $articulo = "<table width=\"100\%\"><tr><td> " . $articulo;
      if ($articulo eq "empty") { print "--ERR: Rechazada $url por falta de contenido\n";next; }
      my $art_size = length($articulo); 
      print "El articulo tiene $art_size size\n";
@@ -102,8 +107,6 @@ sub process_links() {
      }
      else { $articulo = $traductor->translate($articulo); }
      $articulo =~s/'/''/g;
-     # Quito el principio basura de ixdba.net (solo para esta web)
-     $articulo = &limpia_ixdba($articulo);
      $fecha = &get_fecha($url);
      my $summary = &get_html2text($articulo);
      $summary = &trunca($summary,300);
@@ -112,16 +115,11 @@ sub process_links() {
        $url_text = $summary_short; 
        $title_slug = &slug($url_text);
      }
-     &do_query("insert into entries values('','$foro','$category_slug','en','$url','$BASE','$url_text','$title_slug','$fecha','','$articulo','$summary')");
-     push(@hechos,$url);
+     &do_query("insert into entries_$lang values('','$foro','$category_slug','$url','$BASE','$url_text','$title_slug','$fecha',null,'$articulo','$summary')");
+     push(@hechos,$url."_$lang");
   }
 }
 
-sub limpia_ixdba() {
-  my $articulo = shift();
-  $articulo = substr($articulo,450,length($articulo));
-  return($articulo);
-}
 
 sub get_fecha() {
   my $url = shift;
@@ -178,6 +176,7 @@ sub get_html2text {
 }
 
 sub config_googletr() {
+  my $lang = shift;
   Lingua::Translate::config
      (
          back_end => 'Google',
@@ -187,7 +186,7 @@ sub config_googletr() {
          userip   => '192.168.1.1',
      );
 
-  my $googletr = Lingua::Translate->new( src => 'zh-CN', dest => 'en' );
+  my $googletr = Lingua::Translate->new( src => 'zh-CN', dest => "$lang" );
   return ($googletr);
 }
 
