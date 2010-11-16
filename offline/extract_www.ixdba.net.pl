@@ -6,10 +6,11 @@ use WWW::Mechanize;
 use Lingua::Translate;
 my $lang = @ARGV[0];
 our @langs = ("en","pt","es","fr","bg","ca","cs","da","fi","gl","el","nl","hu","is","it","no","pl","sv","tr");
+#our @langs = ("en","es");
 our $BASE = "http://www.ixdba.net";
-our $foro = "Cluster Technology";
+our $foro = "Storage";
 our $category_slug = &slug($foro);
-my $first = "/a/lb/";
+my $first = "/a/st/";
 #my $first = "/";
 our @hechos = &get_lista_query("select url from entries_en");
 our @seguidos;
@@ -35,11 +36,9 @@ sub process_url() {
   $mech->get($BASE.$url2do);
   sleep(1);
   #my @links = $mech->find_all_links( tag => "a", text_regex => qr/linux/i );
-  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/lb/i);
+  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/st/i);
   #&ver_links(@links);die;
-  foreach my $lang (@langs) {
-     &process_links($lang,@links);
-  }
+  &process_links(@links);
   foreach $link (@links) {
      $url = $link->url();
      print "Analizando url = $url\n"; 
@@ -64,62 +63,69 @@ sub ver_links() {
 
 sub process_links() {
   my $mech_link = WWW::Mechanize->new( autocheck => 1 );
-  my $lang = shift;
-  my $traductor = &config_googletr($lang);
-  print "Entra en process_links con idioma = $lang\n";
   my @links = @_;
   my $cuantos = @links;
   my $fecha = "2010-11-12";
   print "Procesando $cuantos links\n";
-  my $nextlink,$content,$content_5000,$articulo;
+  my $content,$articulo;
   foreach my $link (@links) { 
      my $url_text = $link->text();
      my $url = $link->url();
-     $url_text = $traductor->translate($url_text);
-     $url_text =~s/】 【/ /gi;
-     my $title_slug = &slug($url_text);
-     print "Link: $url,$url_text\n"; 
-     if (($url =~ /http/) || (grep {$_ eq $url."_$lang"} @hechos) || !($url =~ /\.html/)) { 
+     if (($url =~ /http/) || (grep {$_ eq $url} @hechos) || !($url =~ /\.html/)) { 
         print "-- ERR: $url Rechazada por url\n"; next; 
      }
-     sleep(1);
+     $fecha = &get_fecha($url);
      $mech_link->get($BASE.$url);
      $content = $mech_link->content;
      $articulo = &get_content($content);
+     
      # Quito el principio basura de ixdba.net (solo para esta web)
      $basura = substr($articulo,0,499);
      $articulo = substr($articulo,499,length($articulo));
      $articulo = "<table width=\"100\%\"><tr><td> " . $articulo;
      if ($articulo eq "empty") { print "--ERR: Rechazada $url por falta de contenido\n";next; }
-     my $art_size = length($articulo); 
-     print "El articulo tiene $art_size size\n";
-     my $max_google_text = 4999;
-     if ($art_size > $max_google_text) {
-       print "*** Entrando en articulo mayor de 5000, size: $art_size\n";
-       my $articulo_tmp,$articulo_truncate;  
-       for($x=0;$x<$art_size;$x=$x+$max_google_text) {
-          print "*** Entra en el for truncando articulo desde $x\n";
-          $articulo_truncate = substr($articulo,$x,$max_google_text);
-          $articulo_tmp = $articulo_tmp . $traductor->translate($articulo_truncate);
-          sleep(1);
-       } 
-       $articulo = $articulo_tmp; 
+            
+     # do it for every languages
+     foreach my $lang (@langs)  {
+        print "*** Traduciendo a $lang\n";
+        my $url_text_lang = &traduce($lang,$url_text);
+        $url_text_lang =~s/】 【/ /gi;
+        my $title_slug = &slug($url_text_lang);
+        print "Link: $url,$url_text_lang\n"; 
+        my $articulo_lang = &traduce($lang,$articulo);
+        $articulo_lang =~s/'/''/g;
+        my $summary = &get_html2text($articulo_lang);
+        $summary = &trunca($summary,300);
+        my $summary_short = &trunca($summary,30);
+        if ($url_text_lang eq "[IMG]") { 
+         $url_text_lang = $summary_short; 
+         $title_slug = &slug($url_text);
+        }
+        &do_query("insert into entries_$lang values('','$foro','$category_slug','$url','$BASE','$url_text_lang','$title_slug','$fecha',null,'$articulo_lang','$summary')");
+        sleep(1);
      }
-     else { $articulo = $traductor->translate($articulo); }
-     $articulo =~s/'/''/g;
-     $fecha = &get_fecha($url);
-     my $summary = &get_html2text($articulo);
-     $summary = &trunca($summary,300);
-     my $summary_short = &trunca($summary,30);
-     if ($url_text eq "[IMG]") { 
-       $url_text = $summary_short; 
-       $title_slug = &slug($url_text);
-     }
-     &do_query("insert into entries_$lang values('','$foro','$category_slug','$url','$BASE','$url_text','$title_slug','$fecha',null,'$articulo','$summary')");
-     push(@hechos,$url."_$lang");
+     push(@hechos,$url);
   }
 }
 
+sub traduce() {
+  my $lang = shift;
+  my $text = shift;
+  my $traductor = &config_googletr($lang);
+  my $text_size = length($text); 
+  my $text_tmp,$text_truncate;  
+  my $max_google_text = 4999;
+  if ($text_size > $max_google_text) {
+       for($x=0;$x<$text_size;$x=$x+$max_google_text) {
+          $text_truncate = substr($text,$x,$max_google_text);
+          $text_tmp = $text_tmp . $traductor->translate($text_truncate);
+          sleep(1);
+       } 
+       $text = $text_tmp; 
+     }
+   else { $text = $traductor->translate($text); }
+   return $text;
+}
 
 sub get_fecha() {
   my $url = shift;

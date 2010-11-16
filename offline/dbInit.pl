@@ -3,8 +3,9 @@ use DBD::mysql;
 my $db = "chnforo";
 my $user = "chnuser";
 my $pass = "maskayerro";
-our $dbh = DBI->connect("dbi:mysql:$db", $user, $pass ) || die( $DBI::errstr . "\n" );
-
+our $dbh = DBI->connect("dbi:mysql:$db",$user,$pass ) || die( $DBI::errstr . "\n" );
+$dbh->{'mysql_enable_utf8'} = 1;
+$dbh->do("SET NAMES 'utf8'");
 sub do_query {
         my $query = shift;
         my $sth=$dbh->prepare($query);
