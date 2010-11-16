@@ -1,11 +1,20 @@
 package Service::Article;
 use Dancer::Plugin::Database;
+use Dancer ':syntax';
 
 sub new {
   my $class = shift;
-  my $self = {};
+  my $self = {
+  	  lang => 'en'
+  };
   bless $self, $class;
   return $self;
+}
+
+sub set_lang{
+ my $self = shift;
+ my $lang = shift;
+ $self->{lang} = $lang;
 }
 
 

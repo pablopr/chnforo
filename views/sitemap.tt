@@ -3,20 +3,20 @@
 
 <h3>Pages</h3> 
 <ul> 
-<li><a href="/sitemap/">Site Map</a></li> 
-<li><a href="#">Tag Cloud</a></li> 
+<li><a href="/<% lang %>/sitemap/">Site Map</a></li> 
+<li><a href="/<% lang %>/#">Tag Cloud</a></li> 
 </ul> 
 <h3>Categories</h3> 
 <ul> 
 <% FOREACH category IN categories %>
-<li><a href="/category/<% category %>/1" title="<% category %>"><% category %></a></li> 	
+<li><a href="/<% lang %>/category/<% category %>/1" title="<% category %>"><% category %></a></li> 	
 <% END %>
 </ul>
 
 <h3>Posts</h3>  
 <ul class="inline"> 
 <% FOREACH article IN main_articles %>
-<li><a href="/<% article.title_slug %>/<% article.id %>" title="<% article.title %>"><% article.title %></a></li>
+<li><a href="/<% lang %>/<% article.title_slug %>/<% article.id %>" title="<% article.title %>"><% article.title %></a></li>
 <% END %>
 </ul>
 

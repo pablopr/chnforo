@@ -11,44 +11,27 @@ our $VERSION = '0.1';
 
 my $article_service = new Service::Article();
 
-before sub {
-	my @articles = $article_service->get_last_articles; 
-        var articles => \@articles;
-        
-        my @categories = $article_service->get_categories;
-        var categories => \@categories;
-        
-};
-
 get '/' => sub {
-     my @random_articles = $article_service->get_random_articles;
-     
-     my $seo_params = &create_seo_params(
-     	     "Bring Knowledge To You",
-     	     "linux,oracle,web,IT,mysql,databases",
-     	     "One Repository for technical documents about Linux, Mysql, Oracle, Open Source, etc. "
-     	     );
-     
-     my $params = { 
-     	articles => vars->{articles},  
-     	categories => vars->{categories} , 
-     	main_articles => \@random_articles,
-     	seo => $seo_params
-     };
-     
-     template 'index', $params;
+	&index_page;
 };
 
-get '/sitemap/:page' => sub {
+get qr{ /([a-z]{2})/?\Z}x => sub{
+     my ($lang) = splat;
      
+     $article_service->set_lang($lang);
+     &index_page;
+};
+
+get  qr{ /([a-z]{2})/sitemap/([0-9]+)}x => sub {
+     my ($lang,$current_page) = splat;
+     $article_service->set_lang($lang);
      my $entries_per_page = 30;
-     my $current_page = params->{page};
     
      my $total_entries = $article_service->count_articles;
      
      my @articles = $article_service->get_paginated_articles($current_page,$entries_per_page);
      
-     my $url = "/sitemap/";
+     my $url = "/$lang/sitemap/";
      my $pager = &create_pagination($total_entries,$current_page,$entries_per_page,$url);
      
      my $seo_params = &create_seo_params(
@@ -62,51 +45,71 @@ get '/sitemap/:page' => sub {
      	categories => vars->{categories} , 
      	main_articles => \@articles,
      	seo => $seo_params,
-     	pager => $pager
+     	pager => $pager,
+        lang => $lang
      };
      
      template 'sitemap', $params;
 };
 
-get '/category/:name/:page' => sub {
+#get '/category/:name/:page' => sub {
+get  qr{ /([a-z]{2})/category/(\w+)/([0-9]+)}x => sub {
+     my ($lang,$category_name,$current_page) = splat;
      
+     #seteamos el lenguaje que viene en la url
+     $article_service->set_lang($lang);
+     
+     #recupera los datos para los menus laterales
+     &prepare_lateral_menus;
+     
+     #datos para la paginacion
      my $entries_per_page = 30;
-     my $category_name = params->{name};
-     
-     my $current_page = params->{page};
      if (!$current_page > 0){
      	     $current_page = 1;
      }
-    
+     
      my $total_entries = $article_service->count_articles_by_category(
      	     $category_name);
      
+     #los articulos paginados
      my @articles = $article_service->get_paginated_articles_by_category(
      	     $category_name,$current_page,$entries_per_page);
-     
-     my $url = "/category/$category_name/";
+    
+     #Creamos paginador
+     my $url = "/$lang/category/$category_name/";
      my $pager = &create_pagination($total_entries,$current_page,$entries_per_page,$url);
      
      my $seo_params = &create_seo_params(
-        	params->{name},
-        	"Articles about ".params->{name},
-     	        "Articles about ".params->{name}
+        	$category_name,
+        	"Articles about ".$category_name,
+     	        "Articles about ".$category_name
      	        );
-       
+     
+     #parametros que metemos en la request
      my $params = { 
      	articles => vars->{articles},  
      	categories => vars->{categories} , 
      	main_articles => \@articles,
      	seo => $seo_params,
-     	pager => $pager
+     	pager => $pager,
+        lang => $article_service->{lang}
      };
      
      template 'index', $params;
 };
 
-get '/:title_slug/:id' => sub {
+get  qr{ /([a-z]{2})/(\w+)/([0-9]+)}x => sub {
+	my ($lang,$title_slug,$id) = splat;
+	
+	#seteamos el lenguaje que viene en la url
+	$article_service->set_lang($lang);
+	
+	#recupera los datos para los menus laterales
+	&prepare_lateral_menus;
 
-        my $article = $article_service->get_article_by_id(params->{id});
+	#detalles del articulo principal
+        my $article = $article_service->get_article_by_id($id);
+        
         
         my $seo_params = &create_seo_params(
         	$article->{title},
@@ -114,18 +117,28 @@ get '/:title_slug/:id' => sub {
      	        $article->{title}
      	        );
         
+     	#parametros que metemos en la request
         my $params = { 
         	articles => vars->{articles}, 
         	categories => vars->{categories}, 
         	article => $article,
-        	seo => $seo_params
+        	seo => $seo_params,
+		lang => $article_service->{lang}
         };
         
         template 'article', $params;
     };
     
-    post '/search' => sub {
-    	    my @articles = $article_service->find_articles_by_keyword(params->{keyword});	
+    post '/:lang/search' => sub {
+    	    my $lang = params->{lang};
+    	    #seteamos el lenguaje que viene en la url
+	    $article_service->set_lang($lang);
+	    
+	    #realiza la busqueda por key
+    	    my @articles = $article_service->find_articles_by_keyword(params->{keyword});
+    	    
+    	    #recupera los datos para los menus laterales
+	    &prepare_lateral_menus;
     	    
     	    my $seo_params = &create_seo_params(
         	params->{keyword},
@@ -137,13 +150,38 @@ get '/:title_slug/:id' => sub {
 		articles => vars->{articles},  
 		categories => vars->{categories} , 
 		main_articles => \@articles,
-		seo => $seo_params
+		seo => $seo_params,
+		lang => $lang
 	     };
 	     
 	     template 'index', $params
     };
     
-
+    
+    ## Crea la pagina de inicio independientemente del idioma
+    sub index_page(){
+    	     
+    	     &prepare_lateral_menus;
+    	     
+    	     my @random_articles = $article_service->get_random_articles;
+	     my $seo_params = &create_seo_params(
+		     "Bring Knowledge To You",
+		     "linux,oracle,web,IT,mysql,databases",
+		     "One Repository for technical documents about Linux, Mysql, Oracle, Open Source, etc. "
+		     );
+	     
+	     my $params = { 
+		articles => vars->{articles},  
+		categories => vars->{categories} , 
+		main_articles => \@random_articles,
+		seo => $seo_params,
+		lang => $article_service->{lang}
+	     };
+	     
+	     template 'index', $params;	    
+    }
+    
+#Crea un hash con los valores para seo
 sub create_seo_params(){
 	my ($title,$keywords,$description) = @_;
 	{
@@ -152,7 +190,17 @@ sub create_seo_params(){
 		description => $description
 	}
 }
- 
+
+#llamadas a bd para traer los datos de los menus laterales
+sub prepare_lateral_menus(){
+        my @articles = $article_service->get_last_articles; 
+        var articles => \@articles;
+        
+        my @categories = $article_service->get_categories;
+        var categories => \@categories;
+}
+
+#crea el paginador
 sub create_pagination(){
 	my ($total_entries,$current_page,$entries_per_page,$url) = @_;
 	

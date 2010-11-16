@@ -12,20 +12,21 @@
 <body>
 
 <div id="header">
+        <p id ="lang"><a href="/en" title="chnforo languages">en</a>|<a href="/es" title="chnforo languages">es</a>|<a href="/fr" title="chnforo languages">fr</a></p>
 	<p id ="logo"><a href="/" title="chnforo home">Chnforo</a></p>
 	<h1><% seo.title %></h1>
 	
 	<div id="layoutdims">  
 		<div id="searchform">
-	        <form action="/search" id="searchform" method="post">
+	        <form action="/<% lang %>/search" id="searchform" method="post">
 				<input type="text" id="keyword" name="keyword" value="">
 				<input type="image" value="search" id="searchsubmit" src="/css/images/btn_search.png">
 	       </form>
 	       </div>
-		<a href="/">Home</a>  
-		<a href="#">Tags</a>   
-		<a href="#">Categories</a>  
-		<a href="/sitemap/1">Sitemap</a>
+		<a href="/<% lang %>">Home</a>  
+		<a href="/<% lang %>#">Tags</a>   
+		<a href="/<% lang %>#">About</a>  
+		<a href="/<% lang %>/sitemap/1">Sitemap</a>
 	</div>
 </div>
 <div class="colmask threecol">
@@ -38,7 +39,7 @@
 				<h2>Recent</h2>
 				 <ul class="list"> 
 				    <% FOREACH article IN articles %>
-				    	 <li><a href="/<% article.title_slug %>/<% article.id %>" title="<% article.title %>"><% article.title %></a></li> 	 	
+				    	 <li><a href="/<% lang %>/<% article.title_slug %>/<% article.id %>" title="<% article.title %>"><% article.title %></a></li> 	 	
 				    <% END %>
                                 </ul> 
 				<!-- Column 2 end -->
@@ -48,7 +49,7 @@
 				<h2>Categories</h2>
 				
 				    <% FOREACH category IN categories %>
-				    	 <h3><a href="/category/<% category %>/1" title="<% category %>"><% category %></a></h3> 	
+				    	 <h3><a href="/<% lang %>/category/<% category %>/1" title="<% category %>"><% category %></a></h3> 	
 				    <% END %>
 				<!-- Column 3 end -->
 			</div>
@@ -56,5 +57,5 @@
 	</div>
 </div>
 <div id="footer">
-	<p>Created by <a href="#">Roberto</a> and <a href="#">Pablo</a>. </p>
+	<p>Created by <a href="#">Con mucho amor</a>  </p>
 </div>
