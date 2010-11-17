@@ -11,9 +11,9 @@ $categories{'st'} = "Storage";
 our @langs = ("en","pt","es","fr","bg","ca","cs","da","fi","gl","el","nl","hu","is","it","no","pl","sv","tr");
 #our @langs = ("en","es");
 our $BASE = "http://www.ixdba.net";
-our $foro = "Linux";
+our $foro = "Cluster Technology";
 our $category_slug = &slug($foro);
-my $first = "/a/os/linux";
+my $first = "/a/lb";
 #my $first = "/";
 our @hechos = &get_lista_query("select url from entries_en");
 our @seguidos;
@@ -39,7 +39,7 @@ sub process_url() {
   $mech->get($BASE.$url2do);
   sleep(1);
   #my @links = $mech->find_all_links( tag => "a", text_regex => qr/linux/i );
-  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/linux/i);
+  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/lb/i);
   #&ver_links(@links);die;
   &process_links(@links);
   foreach $link (@links) {
@@ -70,7 +70,6 @@ sub process_links() {
   my $cuantos = @links;
   my $fecha = "2010-11-12";
   print "Procesando $cuantos links\n";
-  my $content,$articulo;
   foreach my $link (@links) { 
      my $url_text = $link->text();
      my $url = $link->url();
@@ -79,14 +78,13 @@ sub process_links() {
      }
      $fecha = &get_fecha($url);
      $mech_link->get($BASE.$url);
-     $content = $mech_link->content;
-     $articulo = &get_content($content);
-     
-     # Quito el principio basura de ixdba.net (solo para esta web)
-     $basura = substr($articulo,0,499);
-     $articulo = substr($articulo,499,length($articulo));
-     $articulo = "<table width=\"100\%\"><tr><td> " . $articulo;
-     if ($articulo eq "empty") { print "--ERR: Rechazada $url por falta de contenido\n";next; }
+     my $content = $mech_link->content;
+     my $articulo = &get_content("HTML",$content);
+     my $articulo_text = &get_content("TEXT",$content);
+     #print "Articulo original = $articulo\n";
+     #print "Articulo texto = $articulo_text\n";
+     if (($articulo eq "empty") || ($articulo_text eq "empty")) { print "--ERR: Rechazada $url por falta de contenido\n";next; }
+     my $size = length($articulo);
             
      # do it for every languages
      foreach my $lang (@langs)  {
@@ -97,11 +95,18 @@ sub process_links() {
         print "Link: $url,$url_text_lang\n"; 
         my $articulo_lang = &traduce($lang,$articulo);
         $articulo_lang =~s/'/''/g;
-        my $summary = &get_html2text($articulo_lang);
-        $summary = &trunca($summary,300);
-        my $summary_short = &trunca($summary,30);
+        #print "Articulo traducido = $articulo_lang\n";
+        my $summary = &html2text($articulo_lang);
+        #print "Summary = $summary\n";
+        if (length($summary) > 300) {
+          $summary = &trunca($summary,300);
+        }
+        my $summary_short = $summary;
+        if (length($summary_short) > 50) {
+          $summary_short = &trunca($summary,50);
+        }
         if ($url_text_lang eq "[IMG]") {
-         print "*** viene con IMG original es $url_text\n"; 
+         #print "*** viene con IMG original es $url_text\n"; 
          $url_text_lang = $summary_short; 
          $title_slug = &slug($url_text_lang);
         }
@@ -159,31 +164,30 @@ sub url_invalida() {
 }
 
 sub get_content() {
+  my $tipo = shift;
   my $html = shift;
   my $scraper = scraper {
-      process "div.content", "content[]" => 'HTML'; 
+      process "div.content", "content[]" => scraper {
+        process "td",table =>"$tipo";
+      } 
   };
   my $content = $scraper->scrape($html);
   
    for my $tweet (@{$content->{content}}) {
-      return ($tweet);
+      return ($tweet->{table});
   }
   return "empty"; 
 }
 
-
-sub get_html2text {
+sub html2text() {
   my $html = shift;
   my $scraper = scraper {
-      process "table", "content[]" => 'TEXT'; 
+    process ".",texto => 'TEXT';
   };
   my $content = $scraper->scrape($html);
-  
-   for my $tweet (@{$content->{content}}) {
-      return ($tweet);
-  }
-  return "empty"; 
+  return $content->{texto};
 }
+
 
 sub config_googletr() {
   my $lang = shift;
