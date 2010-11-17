@@ -1,8 +1,27 @@
 <div class="col1">
+        <% article_url = "/$lang/$article.title_slug/$article.id" %>
 <!-- Column 1 start -->
 	<h2><% article.title %></h2>
 	
 	<div> <% article.content %></div>
+	
+	
+	<div id="social">
+		<ul id="sociable_icons" class="clearfix"> 
+			<li><a rel="nofollow" target="_top" href="http://del.icio.us/post?url=<% article_url %>&amp;title=<% article.title %>" title="del.icio.us"><img src="/css/images/delicious_32.png" title="del.icio.us" alt="del.icio.us" class="sociable-hovers"></a></li> 
+			<li><a rel="nofollow" target="_top" href="http://www.stumbleupon.com/submit?url=<% article_url %>&amp;title=<% article.title %>" title="StumbleUpon"><img src="/css/images/stumbleupon_32.png" title="StumbleUpon" alt="StumbleUpon" class="sociable-hovers"></a></li> 
+			<li><a rel="nofollow" target="_top" href="http://digg.com/submit?phase=2&amp;url=<% article_url %>&amp;title=<% article.title %>" title="Digg"><img src="/css/images/digg_32.png" title="Digg" alt="Digg" class="sociable-hovers"></a></li> 
+			<li><a rel="nofollow" target="_top" href="http://twitthis.com/twit?url=<% article_url %>" title="TwitThis"><img src="/css/images/twitter_32.png" title="TwitThis" alt="TwitThis" class="sociable-hovers"></a></li> 
+			<li><a rel="nofollow" target="_top" href="http://www.mixx.com/submit?page_url=<% article_url %>&amp;title=<% article.title %>" title="Mixx"><img src="/css/images/mixx_32.png" title="Mixx" alt="Mixx" class="sociable-hovers"></a></li> 
+			<li><a rel="nofollow" target="_top" href="http://technorati.com/faves?add=<% article_url %>" title="Technorati"><img src="/css/images/technorati_32.png" title="Technorati" alt="Technorati" class="sociable-hovers"></a></li> 
+			<li><a rel="nofollow" target="_top" href="http://www.facebook.com/sharer.php?u=<% article_url %>&amp;t=<% article.title %>" title="Facebook"><img src="/css/images/facebook_32.png" title="Facebook" alt="Facebook" class="sociable-hovers"></a></li> 
+			<li><a rel="nofollow" target="_top" href="http://www.newsvine.com/_tools/seed&amp;save?u=<% article_url %>&amp;h=<% article.title %>" title="NewsVine"><img src="/css/images/newsvine_32.png" title="NewsVine" alt="NewsVine" class="sociable-hovers"></a></li> 
+			<li><a rel="nofollow" target="_top" href="http://reddit.com/submit?url=<% article_url %>&amp;title=<% article.title %>" title="Reddit"><img src="/css/images/reddit_32.png" title="Reddit" alt="Reddit" class="sociable-hovers"></a></li> 
+			<li><a rel="nofollow" target="_top" href="http://www.google.com/bookmarks/mark?op=edit&amp;bkmk=<% article_url %>&amp;title=<% article.title %>" title="Google"><img src="/css/images/google_32.png" title="Google" alt="Google" class="sociable-hovers"></a></li> 
+			<li><a rel="nofollow" target="_top" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<% article_url %>&amp;title=<% article.title %>&amp;source=<% article.title %>" title="LinkedIn"><img src="/css/images/linkedin_32.png" title="LinkedIn" alt="LinkedIn" class="sociable-hovers"></a></li> 
+			<li><a rel="nofollow" target="_top" href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=<% article_url %>&amp;=<% article.title %>" title="YahooMyWeb"><img src="/css/images/yahoobuzz_32.png" title="YahooMyWeb" alt="YahooMyWeb" class="sociable-hovers"></a></li> 
+	       </ul>
+	</div>
 	
 	<div class="pagination">
 		<% IF article.prev.id %>
