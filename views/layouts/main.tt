@@ -43,8 +43,6 @@
 	       </form>
 	       </div>
 		<a href="/<% lang %>">Home</a>  
-		<a href="/<% lang %>#">Tags</a>   
-		<a href="/<% lang %>#">About</a>  
 		<a href="/<% lang %>/sitemap/1">Sitemap</a>
 	</div>
 </div>
@@ -62,6 +60,7 @@
 				    <% END %>
                                 </ul> 
                                 
+                                <h2>Tags</h2>
                                 <% cloud_html %>
 				<!-- Column 2 end -->
 			</div>

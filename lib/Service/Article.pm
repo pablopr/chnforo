@@ -59,7 +59,7 @@ sub get_by_id{
 
 sub get_last_articles{
   my $self = shift;
-  my $sth = database->prepare('SELECT id,title,title_slug from entries_'.$self->{lang}.' order by created limit 20');
+  my $sth = database->prepare('SELECT id,title,title_slug from entries_'.$self->{lang}.' order by created limit 30');
   $sth->execute();
   my @hash_ref_list= ();
   
@@ -100,7 +100,7 @@ sub get_articles_by_category{
 sub find_articles_by_keyword{
   my $self = shift;
   my $keyword = shift;
-  my $sth = database->prepare('SELECT id,title,title_slug,summary from entries_'.$self->{lang}.' where title like ? order by created limit 30',);
+  my $sth = database->prepare('SELECT id,title,title_slug,summary from entries_'.$self->{lang}.' where title like ? order by created limit 40',);
   $sth->execute('%'.$keyword.'%');
   my @hash_ref_list= ();
   
@@ -140,7 +140,7 @@ sub get_paginated_articles_by_category {
   my $page = shift;
   my $num_per_page = shift;
   my $cursor = ($page-1) * $num_per_page; 
-  my $sth = database->prepare("SELECT * FROM entries_'.$self->{lang}.' where category=? ORDER BY id DESC LIMIT ?,?"); 
+  my $sth = database->prepare("SELECT * FROM entries_$self->{lang} where category=? ORDER BY id DESC LIMIT ?,?"); 
   $sth->execute($category_name,$cursor,$num_per_page+1);
   
   my @hash_ref_list= ();
@@ -156,7 +156,7 @@ sub get_paginated_articles {
   my $page = shift;
   my $num_per_page = shift;
   my $cursor = ($page-1) * $num_per_page; 
-  my $sth = database->prepare("SELECT id,title,title_slug FROM entries_'.$self->{lang}.' ORDER BY id DESC LIMIT ?,?"); 
+  my $sth = database->prepare("SELECT id,title,title_slug FROM entries_$self->{lang} ORDER BY id DESC LIMIT ?,?"); 
   $sth->execute($cursor,$num_per_page+1);
   
   my @hash_ref_list= ();
@@ -175,7 +175,7 @@ sub get_tag_cloud_html{
   $sth->execute();
   
   while (my $row = $sth->fetchrow_hashref()) {
-  	my $url = "/tag/$row->{tag}";
+  	my $url = "/$self->{lang}/tag/$row->{tag}";
   	$cloud->add($row->{tag}, $url, $row->{density});
   }
   

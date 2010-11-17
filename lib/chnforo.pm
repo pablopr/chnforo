@@ -31,6 +31,33 @@ get qr{ /([a-z]{2})/?\Z}x => sub{
      &index_page;
 };
 
+get  qr{ /([a-z]{2})/tag/(\w+)}x => sub {
+	my ($lang,$tag) = splat;
+	
+	#seteamos el lenguaje que viene en la url
+	$article_service->set_lang($lang);
+	
+	my @articles = $article_service->find_articles_by_keyword($tag);
+	
+	#recupera los datos para los menus laterales
+	&prepare_lateral_menus;
+
+        my $seo_params = &create_seo_params($tag,$tag,$tag);
+        
+     	#parametros que metemos en la request
+        my $params = { 
+        	articles => vars->{articles}, 
+        	categories => vars->{categories}, 
+        	cloud_html => vars->{cloud_html},
+        	main_articles => \@articles,
+		seo => $seo_params,
+        };
+        
+        template 'index', $params;
+    };
+
+
+
 get  qr{ /([a-z]{2})/sitemap/([0-9]+)}x => sub {
      my ($lang,$current_page) = splat;
      $article_service->set_lang($lang);
@@ -89,8 +116,8 @@ get  qr{ /([a-z]{2})/category/(\w+)/([0-9]+)}x => sub {
      
      my $seo_params = &create_seo_params(
         	$category_name,
-        	"Articles about ".$category_name,
-     	        "Articles about ".$category_name
+        	$category_name,
+     	        $category_name
      	        );
      
      #parametros que metemos en la request

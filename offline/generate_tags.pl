@@ -31,7 +31,8 @@ sub extract_tags_from_text{
 	print "###### tenemos estas palabras @pieces \n";
 	my @tags = ();
 	for my $piece(@pieces){
-		if (length($piece) > 2){
+		if (length($piece) > 2 && $piece ne 'the' && $piece ne 'can' 
+			&& $piece ne 'not' && $piece ne 'set' && $piece ne 'will'){
 			push(@tags,$piece);
 		}
 	}

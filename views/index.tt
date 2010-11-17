@@ -6,7 +6,7 @@
 					<h2><a href="/<% lang %>/<% article.title_slug %>/<% article.id %>" title="<% article.title %>"><% article.title %></a></h2>
 					<p> 
 					
-					<% article.summary %>
+					<% article.summary %>...
 		
 					</p>
 				<% END %>
