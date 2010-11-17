@@ -5,12 +5,15 @@ require ("dbInit.pl");
 use WWW::Mechanize;
 use Lingua::Translate;
 my $lang = @ARGV[0];
+our %categories;
+$categories{'lb'} = "Cluster Technology";
+$categories{'st'} = "Storage";
 our @langs = ("en","pt","es","fr","bg","ca","cs","da","fi","gl","el","nl","hu","is","it","no","pl","sv","tr");
 #our @langs = ("en","es");
 our $BASE = "http://www.ixdba.net";
-our $foro = "Storage";
+our $foro = "Linux";
 our $category_slug = &slug($foro);
-my $first = "/a/st/";
+my $first = "/a/os/linux";
 #my $first = "/";
 our @hechos = &get_lista_query("select url from entries_en");
 our @seguidos;
@@ -36,7 +39,7 @@ sub process_url() {
   $mech->get($BASE.$url2do);
   sleep(1);
   #my @links = $mech->find_all_links( tag => "a", text_regex => qr/linux/i );
-  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/st/i);
+  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/linux/i);
   #&ver_links(@links);die;
   &process_links(@links);
   foreach $link (@links) {
@@ -97,9 +100,10 @@ sub process_links() {
         my $summary = &get_html2text($articulo_lang);
         $summary = &trunca($summary,300);
         my $summary_short = &trunca($summary,30);
-        if ($url_text_lang eq "[IMG]") { 
+        if ($url_text_lang eq "[IMG]") {
+         print "*** viene con IMG original es $url_text\n"; 
          $url_text_lang = $summary_short; 
-         $title_slug = &slug($url_text);
+         $title_slug = &slug($url_text_lang);
         }
         &do_query("insert into entries_$lang values('','$foro','$category_slug','$url','$BASE','$url_text_lang','$title_slug','$fecha',null,'$articulo_lang','$summary')");
         sleep(1);
@@ -211,6 +215,6 @@ sub trunca() {
    my($string, $maxlength) = @_;
    $string = substr($string, 0, $maxlength+1);
    die("Can't truncate, no spaces\n") if(index($string, ' ') == -1);
-   return substr($string, 0, rindex($string, ' '))."...";
+   return substr($string, 0, rindex($string, ' '));
 }
 
