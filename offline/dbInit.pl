@@ -8,7 +8,6 @@ $dbh->{'mysql_enable_utf8'} = 1;
 $dbh->do("SET NAMES 'utf8'");
 sub do_query {
         my $query = shift;
-        print " $query \n";
         my $sth=$dbh->prepare($query);
         $sth->execute();
         $sth->finish();
