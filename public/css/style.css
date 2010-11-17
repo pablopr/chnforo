@@ -203,3 +203,23 @@ img {
 #lang{
 	float: right;	
 }
+
+#sociable_icons {
+	border-bottom:1px solid #DDDDDD;
+	margin:0 0 8px;
+	padding:5px 0;
+}
+
+#sociable_icons li {
+	display:inline;
+	list-style:none outside none;
+}
+#sociable_icons img {
+	border:medium none;
+}
+
+#sociable_icons a:hover {
+	background:none; 
+}
+
+
