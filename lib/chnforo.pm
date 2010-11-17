@@ -152,6 +152,7 @@ get  qr{ /([a-z]{2})/(\w+)/([0-9]+)}x => sub {
      	        $article->{title}
      	        );
         
+     	debug "######### Title:  $article->{title} \n";
      	#parametros que metemos en la request
         my $params = { 
         	articles => vars->{articles}, 
