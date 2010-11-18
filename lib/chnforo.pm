@@ -9,8 +9,11 @@ use HTML::TagCloud;
 require "utils.pl";
 
 our $VERSION = '0.1';
+my $article_service;
 
-my $article_service = new Service::Article();
+before sub{
+	$article_service = new Service::Article();
+};
 
 before_template sub {
 	my $tokens = shift;

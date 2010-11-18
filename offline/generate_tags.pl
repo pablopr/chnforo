@@ -2,10 +2,14 @@
 use strict;
 require ("dbInit.pl");
 
+
+
 my @languages =("en","pt","es","fr","bg","ca","cs","da","fi","gl","el","nl","hu","is","it","no","pl","sv","tr");
 
 for my $lang(@languages){
 	 my @articles = &get_articles($lang);
+	 
+	 &do_query("DELETE FROM tags_$lang");
 	 
 	 print "###### Extracting tags in $lang \n";
 	 for my $article(@articles){
@@ -25,14 +29,14 @@ sub create_tags_from_string{
 
 sub extract_tags_from_text{
 	my $text = shift;
-        $text =~s/ /_/g;
+	$text =~s/ /_/g;
         $text =~s/\.//g;
 	my @pieces = split(/_/,$text);
 	print "###### tenemos estas palabras @pieces \n";
 	my @tags = ();
 	for my $piece(@pieces){
-		if (length($piece) > 2 && $piece ne 'the' && $piece ne 'can' 
-			&& $piece ne 'not' && $piece ne 'set' && $piece ne 'will'){
+		$piece =~s/\W//g;
+		if (length($piece) > 2 ){
 			push(@tags,$piece);
 		}
 	}

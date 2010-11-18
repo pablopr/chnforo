@@ -20,7 +20,7 @@
 <% END %>
 </ul>
 
-<div class="pagenavi"> 
+<div class="pagination">
 <% pager %>
 </div> 
 
