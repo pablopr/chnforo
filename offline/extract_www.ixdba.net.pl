@@ -8,12 +8,13 @@ my $lang = @ARGV[0];
 our %categories;
 $categories{'lb'} = "Cluster Technology";
 $categories{'st'} = "Storage";
+$categories{'mz'} = "Technology Clinic";
 our @langs = ("en","pt","es","fr","bg","ca","cs","da","fi","gl","el","nl","hu","is","it","no","pl","sv","tr");
 #our @langs = ("en","es");
 our $BASE = "http://www.ixdba.net";
-our $foro = "Cluster Technology";
+our $foro = "linux";
 our $category_slug = &slug($foro);
-my $first = "/a/lb";
+my $first = "/a/os/linux";
 #my $first = "/";
 our @hechos = &get_lista_query("select url from entries_en");
 our @seguidos;
@@ -39,7 +40,7 @@ sub process_url() {
   $mech->get($BASE.$url2do);
   sleep(1);
   #my @links = $mech->find_all_links( tag => "a", text_regex => qr/linux/i );
-  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/lb/i);
+  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/linux/i);
   #&ver_links(@links);die;
   &process_links(@links);
   foreach $link (@links) {
