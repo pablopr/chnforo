@@ -55,8 +55,8 @@
 				<!-- Column 2 start -->
 				<h2>Recent</h2>
 				 <ul class="list"> 
-				    <% FOREACH article IN articles %>
-				    	 <li><a href="/<% lang %>/<% article.title_slug %>/<% article.id %>" title="<% article.title %>"><% article.title %></a></li> 	 	
+				    <% FOREACH my_article IN articles %>
+				    	 <li><a href="/<% lang %>/<% my_article.title_slug %>/<% my_article.id %>" title="<% my_article.title %>"><% my_article.title %></a></li> 	 	
 				    <% END %>
                                 </ul> 
                                 
@@ -69,13 +69,22 @@
 				<!-- Column 3 start -->
 				<h2>Categories</h2>
 				
-				    <% FOREACH category IN categories %>
-				    	 <h3><a href="/<% lang %>/category/<% category %>/1" title="<% category %>"><% category %></a></h3> 	
+				    <% FOREACH my_category IN categories %>
+				    	 <h3><a href="/<% lang %>/category/<% my_category %>/1" title="<% my_category %>"><% my_category %></a></h3> 	
 				    <% END %>
 				 </div>
 				 <div style="float:right;">
+                                        <% IF (article.category == 'Linux') %>
+                                            <a href="http://www.bookdepository.co.uk/search?searchTerm=linux&a_aid=qe5zt"><img style="border:0" src="/images/ads_linux.png" width="150" height="942" alt="Linux"></a>
+				        <% ELSIF (article.category == 'Cluster') %>
+                                        <a href="http://www.bookdepository.co.uk/search?searchTerm=linux+cluster&a_aid=qe5zt"><img style="border:0" src="/images/ads_cluster.png" width="150" height="942" alt="Linux"></a>	
+
+				        <% ELSIF (article.category == 'Cluster') %>
+                                        <a href="http://www.bookdepository.co.uk/search?searchTerm=solaris&a_aid=qe5zt"><img style="border:0" src="/images/ads_solaris.png" width="150" height="942" alt="Linux"></a>	
+                                        <% ELSE %>
 				 	<a href="http://www.bookdepository.co.uk?a_aid=qe5zt&amp;a_bid=98ad59c8"><img src="http://affiliates.bookdepository.co.uk/accounts/default1/banners/120-x-600-1.jpg" alt="The BookDepository" title="The BookDepository" width="120" height="600" /></a><img style="border:0" src="http://affiliates.bookdepository.co.uk:8080/scripts/imp.php?a_aid=qe5zt&amp;a_bid=98ad59c8" width="1" height="1" alt="" />
-				 </div>
+					<% END %> 
+				</div>
 				<!-- Column 3 end -->
 			</div>
 		</div>
