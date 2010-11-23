@@ -24,3 +24,18 @@ sub get_lista_query {
   }
   return(@lista);
 }
+
+
+sub get_lista_hashref_query {
+  my $query = shift;
+  my $sth=$dbh->prepare($query);
+  $sth->execute();
+   my @hash_ref_list= ();
+  while (my $row = $sth->fetchrow_hashref()) {
+  	push(@hash_ref_list,$row);
+  }
+    
+  return @hash_ref_list;  
+}
+
+
