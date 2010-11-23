@@ -1,7 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//<% lang %>" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<% lang %>">
 <head>
-	<title><% seo.title %> | Chnforo</title>
+	<title><% seo.title %> | Knowledge forum </title>
 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
 	<meta name="description" content="<% seo.description %>" />
 	<meta name="keywords" content="<% seo.keywords %>" />
@@ -65,12 +65,17 @@
 				<!-- Column 2 end -->
 			</div>
 			<div class="col3">
+				<div style="float:left;">
 				<!-- Column 3 start -->
 				<h2>Categories</h2>
 				
 				    <% FOREACH category IN categories %>
 				    	 <h3><a href="/<% lang %>/category/<% category %>/1" title="<% category %>"><% category %></a></h3> 	
 				    <% END %>
+				 </div>
+				 <div style="float:right;">
+				 	<a href="http://www.bookdepository.co.uk?a_aid=qe5zt&amp;a_bid=98ad59c8"><img src="http://affiliates.bookdepository.co.uk/accounts/default1/banners/120-x-600-1.jpg" alt="The BookDepository" title="The BookDepository" width="120" height="600" /></a><img style="border:0" src="http://affiliates.bookdepository.co.uk:8080/scripts/imp.php?a_aid=qe5zt&amp;a_bid=98ad59c8" width="1" height="1" alt="" />
+				 </div>
 				<!-- Column 3 end -->
 			</div>
 		</div>

@@ -101,6 +101,7 @@ sub find_articles_by_keyword{
   my $self = shift;
   my $keyword = shift;
   my $sth = database->prepare('SELECT id,title,title_slug,summary from entries_'.$self->{lang}.' where title like ? order by created limit 40',);
+  #my $sth = database->prepare("SELECT id,title,title_slug,summary FROM from entries_$self->{lang} WHERE MATCH (title) AGAINST (?  in boolean mode)",);
   $sth->execute('%'.$keyword.'%');
   my @hash_ref_list= ();
   
