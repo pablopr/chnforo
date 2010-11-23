@@ -70,7 +70,7 @@
 				<h2>Categories</h2>
 				
 				    <% FOREACH category IN categories %>
-				    	 <h3><a href="/<% lang %>/category/<% category %>/1" title="<% category %>"><% category %></a></h3> 	
+				    	 <h3><a href="/<% lang %>/category/<% category.slug %>/1" title="<% category.name %>"><% category.name %></a></h3> 	
 				    <% END %>
 				 </div>
 				 <div style="float:right;">

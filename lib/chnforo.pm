@@ -92,7 +92,7 @@ get  qr{ /([a-z]{2})/sitemap/([0-9]+)}x => sub {
 
 #get '/category/:name/:page' => sub {
 get  qr{ /([a-z]{2})/category/(\w+)/([0-9]+)}x => sub {
-     my ($lang,$category_name,$current_page) = splat;
+     my ($lang,$category_slug,$current_page) = splat;
      
      #seteamos el lenguaje que viene en la url
      $article_service->set_lang($lang);
@@ -107,20 +107,20 @@ get  qr{ /([a-z]{2})/category/(\w+)/([0-9]+)}x => sub {
      }
      
      my $total_entries = $article_service->count_articles_by_category(
-     	     $category_name);
+     	     $category_slug);
      
      #los articulos paginados
      my @articles = $article_service->get_paginated_articles_by_category(
-     	     $category_name,$current_page,$entries_per_page);
+     	     $category_slug,$current_page,$entries_per_page);
     
      #Creamos paginador
-     my $url = "/$lang/category/$category_name/";
+     my $url = "/$lang/category/$category_slug/";
      my $pager = &create_pagination($total_entries,$current_page,$entries_per_page,$url);
      
      my $seo_params = &create_seo_params(
-        	$category_name,
-        	$category_name,
-     	        $category_name
+        	$category_slug,
+        	$category_slug,
+     	        $category_slug
      	        );
      
      #parametros que metemos en la request
@@ -237,6 +237,7 @@ sub prepare_lateral_menus(){
         var articles => \@articles;
         
         my @categories = $article_service->get_categories;
+       debug "##### @categories";
         var categories => \@categories;
         
         var cloud_html => $article_service->get_tag_cloud_html;

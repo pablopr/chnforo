@@ -86,7 +86,7 @@ sub get_random_articles{
 sub get_articles_by_category{
   my $self = shift;
   my $category_name = shift;
-  my $sth = database->prepare('SELECT id,title,title_slug,summary from entries_'.$self->{lang}.' where category=? order by created limit 30',);
+  my $sth = database->prepare('SELECT id,title,title_slug,summary from entries_'.$self->{lang}.' where category_slug=? order by created limit 30',);
   $sth->execute($category_name);
   my @hash_ref_list= ();
   
@@ -115,7 +115,7 @@ sub find_articles_by_keyword{
 sub count_articles_by_category{
   my $self = shift;
   my $category_name = shift;
-  database->selectrow_array('SELECT count(*) from entries_'.$self->{lang}.' where category=?',undef,$category_name);
+  database->selectrow_array('SELECT count(*) from entries_'.$self->{lang}.' where category_slug=?',undef,$category_name);
 }
 
 sub count_articles{
@@ -124,12 +124,12 @@ sub count_articles{
 }
 sub get_categories{
   my $self = shift;
-  my $sth = database->prepare('SELECT distinct(category) from entries_'.$self->{lang}.'');
+  my $sth = database->prepare('SELECT distinct(category) as name,category_slug as slug from entries_'.$self->{lang}.'');
   $sth->execute();
   my @hash_ref_list= ();
   
   while (my $row = $sth->fetchrow_hashref()) {
-  	  push(@hash_ref_list,$row->{category});
+  	  push(@hash_ref_list,$row);
   }
     
   return @hash_ref_list;  
@@ -141,7 +141,7 @@ sub get_paginated_articles_by_category {
   my $page = shift;
   my $num_per_page = shift;
   my $cursor = ($page-1) * $num_per_page; 
-  my $sth = database->prepare("SELECT * FROM entries_$self->{lang} where category=? ORDER BY id DESC LIMIT ?,?"); 
+  my $sth = database->prepare("SELECT * FROM entries_$self->{lang} where category_slug=? ORDER BY id DESC LIMIT ?,?"); 
   $sth->execute($category_name,$cursor,$num_per_page+1);
   
   my @hash_ref_list= ();
