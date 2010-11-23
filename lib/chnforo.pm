@@ -136,6 +136,7 @@ get  qr{ /([a-z]{2})/category/(\w+)/([0-9]+)}x => sub {
      template 'index', $params;
 };
 
+#pagina de detalle de articulo
 get  qr{ /([a-z]{2})/(\w+)/([0-9]+)}x => sub {
 	my ($lang,$title_slug,$id) = splat;
 	
