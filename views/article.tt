@@ -5,7 +5,6 @@
 	
 	<div> <% article.content %></div>
 	
-	
 	<div id="social">
 		<ul id="sociable_icons" class="clearfix"> 
 			<li><a rel="nofollow" target="_top" href="http://del.icio.us/post?url=<% article_url %>&amp;title=<% article.title %>" title="del.icio.us"><img src="/css/images/delicious_32.png" title="del.icio.us" alt="del.icio.us" class="sociable-hovers"></a></li> 
