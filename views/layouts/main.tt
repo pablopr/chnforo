@@ -29,10 +29,10 @@
 <div id="header">
         <p id ="lang">
            <% FOREACH language IN languages %>
-           	<a href="/<% language %>" title="chnforo languages"><% language %></a>|
+           	<a href="/<% language %>" title="Knowrepository languages"><% language %></a>|
             <% END %>
         </p>
-	<p id ="logo"><a href="/" title="chnforo home">Chnforo</a></p>
+	<p id ="logo"><a href="/" title="Knowrepository home">Knowrepository</a></p>
 	<h1><% seo.title %></h1>
 	
 	<div id="layoutdims">  
