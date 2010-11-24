@@ -26,8 +26,8 @@ require ("dbInit.pl");
 						$writer->characters("http://www.knowrepository.com/sitemap_$i.xml");
 					$writer->endTag('loc');  
 					$writer->startTag('lastmod');
-						my $now = localtime time;
-						$writer->characters($now);
+						#my $now = localtime time;
+						$writer->characters('2010-11-23');
 					$writer->endTag('lastmod');
 			      $writer->endTag('sitemap');
 		      }	
