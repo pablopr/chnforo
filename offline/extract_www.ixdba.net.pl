@@ -1,29 +1,52 @@
 #!/usr/bin/perl
 use URI;
 use Web::Scraper;
-require ("dbInit.pl");
 use WWW::Mechanize;
 use Lingua::Translate;
-my $lang = @ARGV[0];
+use Encode;
+require ("dbInit.pl");
+binmode( STDIN,  ':utf8' );
+binmode( STDOUT, ':utf8' );
 
-our %categories;
-$categories{'lb'} = "Cluster Technology";
+my %categories;
+my %first;
+$categories{'lb'} = "Cluster";
+$first{'lb'} = "/a/lb";
 $categories{'st'} = "Storage";
-$categories{'mz'} = "Technology Clinic";
+$first{'st'} = "/a/st";
+$categories{'mz'} = "Clinic";
+$first{'mz'} = "/a/mz";
 $categories{'IT'} = "IT";
+$first{'IT'} = "/a/IT";
 $categories{'Solris'} = "Solaris";
+$first{'Solris'} = "/a/os/Solris";
+$categories{'linux'} = "Linux";
+$first{'linux'} = "/a/os/linux";
+$categories{'mysql'} = "Mysql";
+$first{'mysql'} = "/a/db/mysql";
+$categories{'oracle'} = "Oracle";
+$first{'oracle'} = "/a/db/oracle";
+$categories{'apache'} = "Apache";
+$first{'apache'} = "/a/web/apache";
+$categories{'tomcat'} = "Tomcat";
+$first{'tomcat'} = "/a/web/tomcat";
+$categories{'nginx'} = "Nginx";
+$first{'nginx'} = "/a/web/nginx";
 
-our @langs = ("en","pt","es","fr","bg","ca","cs","da","fi","gl","el","nl","hu","is","it","no","pl","sv","tr");
-#our @langs = ("en","es");
+
+
+our @langs = ("en","pt","es","fr","ca","da","fi","gl","nl","is","it","no","sv");
 our $BASE = "http://www.ixdba.net";
-our $foro = "IT";
-our $category_slug = &slug($foro);
-my $first = "/a/IT";
-#my $first = "/";
 our @hechos = &get_lista_query("select url from entries_en");
 our @seguidos;
 my $mech = WWW::Mechanize->new( autocheck => 1 );
-&process_url($first);
+
+foreach my $key (%categories) {
+  print "Starting with Foro = $categories{$key} Path = $key\n";
+  my $foro = $categories{$key};
+  my $primero = $first{$key};
+  &process_url($primero,$key,$foro);
+}
 print "*** Mostrando la lista de hechos\n";
 &ver_lista(@hechos);
 print "Mostrando la lista de seguidos\n";
@@ -39,19 +62,21 @@ sub slug() {
 
 sub process_url() {
   my $url2do = shift;
+  my $patron_url = shift;
+  my $foro = shift;
   push(@seguidos,$url2do);
-  print "**** Entra a process_url($url2do)\n";
+  print "**** Entra a process_url($url2do) con foro = $foro y patron = $patron_url\n";
   $mech->get($BASE.$url2do);
   sleep(1);
   #my @links = $mech->find_all_links( tag => "a", text_regex => qr/linux/i );
-  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/IT/i);
+  my @links = $mech->find_all_links( tag => "a", url_regex => qr/\/$patron_url/i);
   #&ver_links(@links);die;
-  &process_links(@links);
+  &process_links($foro,@links);
   foreach $link (@links) {
      $url = $link->url();
      print "Analizando url = $url\n"; 
-     if (($url =~ /http/) || (grep {$_ eq $url} @seguidos))  { print "Se descarta $url\n"; next; }
-     &process_url($url);
+     if (($url =~ /http/) || (grep {$_ eq $url} @seguidos) || ($url =~/ftp:/))  { print "Se descarta $url\n"; next; }
+     &process_url($url,$patron_url,$foro);
   }
   print "SE termina una rama!!!\n";
   return;
@@ -71,6 +96,8 @@ sub ver_links() {
 
 sub process_links() {
   my $mech_link = WWW::Mechanize->new( autocheck => 1 );
+  my $foro = shift;
+  my $category_slug = &slug($foro);
   my @links = @_;
   my $cuantos = @links;
   my $fecha = "2010-11-12";
@@ -100,7 +127,6 @@ sub process_links() {
         print "Link: $url,$url_text_lang\n"; 
         my $articulo_lang = &traduce($lang,$articulo);
         $articulo_lang =~s/'/''/g;
-        #print "Articulo traducido = $articulo_lang\n";
         my $summary = &html2text($articulo_lang);
         #print "Summary = $summary\n";
         if (length($summary) > 300) {
@@ -111,7 +137,6 @@ sub process_links() {
           $summary_short = &trunca($summary,50);
         }
         if ($url_text_lang eq "[IMG]") {
-         #print "*** viene con IMG original es $url_text\n"; 
          $url_text_lang = $summary_short; 
          $title_slug = &slug($url_text_lang);
         }
@@ -133,6 +158,7 @@ sub traduce() {
        for($x=0;$x<$text_size;$x=$x+$max_google_text) {
           $text_truncate = substr($text,$x,$max_google_text);
           $text_tmp = $text_tmp . $traductor->translate($text_truncate);
+          $text_tmp = $text_tmp . $traducido;
           sleep(1);
        } 
        $text = $text_tmp; 

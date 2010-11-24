@@ -59,19 +59,6 @@ CREATE TABLE entries_fr (
   primary key (id));
 
 DROP TABLE IF EXISTS `entries_bg`;
-CREATE TABLE entries_bg (
-  id int(10) unsigned not null auto_increment,
-  category varchar(128) not null default 'Linux',
-  category_slug varchar(128) not null default 'Linux',
-  url varchar(255) not null,
-  url_base varchar(255) not null,
-  title varchar(255) not null,
-  title_slug varchar(255) not null,
-  original_date date not null,
-  created timestamp default CURRENT_TIMESTAMP,
-  content text,
-  summary text,
-  primary key (id));
 
 DROP TABLE IF EXISTS `entries_ca`;
 CREATE TABLE entries_ca (
@@ -89,19 +76,6 @@ CREATE TABLE entries_ca (
   primary key (id));
 
 DROP TABLE IF EXISTS `entries_cs`;
-CREATE TABLE entries_cs (
-  id int(10) unsigned not null auto_increment,
-  category varchar(128) not null default 'Linux',
-  category_slug varchar(128) not null default 'Linux',
-  url varchar(255) not null,
-  url_base varchar(255) not null,
-  title varchar(255) not null,
-  title_slug varchar(255) not null,
-  original_date date not null,
-  created timestamp default CURRENT_TIMESTAMP,
-  content text,
-  summary text,
-  primary key (id));
 
 DROP TABLE IF EXISTS `entries_da`;
 CREATE TABLE entries_da (
@@ -149,19 +123,6 @@ CREATE TABLE entries_gl (
   primary key (id));
 
 DROP TABLE IF EXISTS `entries_el`;
-CREATE TABLE entries_el (
-  id int(10) unsigned not null auto_increment,
-  category varchar(128) not null default 'Linux',
-  category_slug varchar(128) not null default 'Linux',
-  url varchar(255) not null,
-  url_base varchar(255) not null,
-  title varchar(255) not null,
-  title_slug varchar(255) not null,
-  original_date date not null,
-  created timestamp default CURRENT_TIMESTAMP,
-  content text,
-  summary text,
-  primary key (id));
 
 DROP TABLE IF EXISTS `entries_nl`;
 CREATE TABLE entries_nl (
@@ -179,19 +140,6 @@ CREATE TABLE entries_nl (
   primary key (id));
 
 DROP TABLE IF EXISTS `entries_hu`;
-CREATE TABLE entries_hu (
-  id int(10) unsigned not null auto_increment,
-  category varchar(128) not null default 'Linux',
-  category_slug varchar(128) not null default 'Linux',
-  url varchar(255) not null,
-  url_base varchar(255) not null,
-  title varchar(255) not null,
-  title_slug varchar(255) not null,
-  original_date date not null,
-  created timestamp default CURRENT_TIMESTAMP,
-  content text,
-  summary text,
-  primary key (id));
 
 DROP TABLE IF EXISTS `entries_is`;
 CREATE TABLE entries_is (
@@ -239,19 +187,6 @@ CREATE TABLE entries_no (
   primary key (id));
 
 DROP TABLE IF EXISTS `entries_pl`;
-CREATE TABLE entries_pl (
-  id int(10) unsigned not null auto_increment,
-  category varchar(128) not null default 'Linux',
-  category_slug varchar(128) not null default 'Linux',
-  url varchar(255) not null,
-  url_base varchar(255) not null,
-  title varchar(255) not null,
-  title_slug varchar(255) not null,
-  original_date date not null,
-  created timestamp default CURRENT_TIMESTAMP,
-  content text,
-  summary text,
-  primary key (id));
 
 DROP TABLE IF EXISTS `entries_sv`;
 CREATE TABLE entries_sv (
@@ -269,19 +204,6 @@ CREATE TABLE entries_sv (
   primary key (id));
 
 DROP TABLE IF EXISTS `entries_tr`;
-CREATE TABLE entries_tr (
-  id int(10) unsigned not null auto_increment,
-  category varchar(128) not null default 'Linux',
-  category_slug varchar(128) not null default 'Linux',
-  url varchar(255) not null,
-  url_base varchar(255) not null,
-  title varchar(255) not null,
-  title_slug varchar(255) not null,
-  original_date date not null,
-  created timestamp default CURRENT_TIMESTAMP,
-  content text,
-  summary text,
-  primary key (id));
 
 
 DROP TABLE IF EXISTS `tags_en`;
@@ -309,11 +231,6 @@ CREATE TABLE tags_fr (
   density int(10) unsigned not null,
   primary key (id));
   DROP TABLE IF EXISTS `tags_bg`;
-CREATE TABLE tags_bg (
-  id int(10) unsigned not null auto_increment,
-  tag varchar(128) not null,
-  density int(10) unsigned not null,
-  primary key (id));
   DROP TABLE IF EXISTS `tags_ca`;
 CREATE TABLE tags_ca (
   id int(10) unsigned not null auto_increment,
@@ -321,11 +238,6 @@ CREATE TABLE tags_ca (
   density int(10) unsigned not null,
   primary key (id));
   DROP TABLE IF EXISTS `tags_cs`;
-CREATE TABLE tags_cs (
-  id int(10) unsigned not null auto_increment,
-  tag varchar(128) not null,
-  density int(10) unsigned not null,
-  primary key (id));
   DROP TABLE IF EXISTS `tags_da`;
 CREATE TABLE tags_da (
   id int(10) unsigned not null auto_increment,
@@ -345,11 +257,6 @@ CREATE TABLE tags_gl (
   density int(10) unsigned not null,
   primary key (id));
   DROP TABLE IF EXISTS `tags_el`;
-CREATE TABLE tags_el (
-  id int(10) unsigned not null auto_increment,
-  tag varchar(128) not null,
-  density int(10) unsigned not null,
-  primary key (id));
   DROP TABLE IF EXISTS `tags_nl`;
 CREATE TABLE tags_nl (
   id int(10) unsigned not null auto_increment,
@@ -357,11 +264,6 @@ CREATE TABLE tags_nl (
   density int(10) unsigned not null,
   primary key (id));
   DROP TABLE IF EXISTS `tags_hu`;
-CREATE TABLE tags_hu (
-  id int(10) unsigned not null auto_increment,
-  tag varchar(128) not null,
-  density int(10) unsigned not null,
-  primary key (id));
   DROP TABLE IF EXISTS `tags_is`;
 CREATE TABLE tags_is (
   id int(10) unsigned not null auto_increment,
@@ -381,11 +283,6 @@ CREATE TABLE tags_no (
   density int(10) unsigned not null,
   primary key (id));
   DROP TABLE IF EXISTS `tags_pl`;
-CREATE TABLE tags_pl (
-  id int(10) unsigned not null auto_increment,
-  tag varchar(128) not null,
-  density int(10) unsigned not null,
-  primary key (id));
   DROP TABLE IF EXISTS `tags_sv`;
 CREATE TABLE tags_sv (
   id int(10) unsigned not null auto_increment,
@@ -393,10 +290,3 @@ CREATE TABLE tags_sv (
   density int(10) unsigned not null,
   primary key (id));
   DROP TABLE IF EXISTS `tags_tr`;
-CREATE TABLE tags_tr (
-  id int(10) unsigned not null auto_increment,
-  tag varchar(128) not null,
-  density int(10) unsigned not null,
-  primary key (id));
-
- 
