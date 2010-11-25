@@ -19,7 +19,7 @@ before_template sub {
 	my $tokens = shift;
 	#metemos el idioma para todas las plantillas
         $tokens->{lang} = $article_service->{lang};
-        my @languages =("en","pt","es","fr","bg","ca","cs","da","fi","gl","el","nl","hu","is","it","no","pl","sv","tr");
+        my @languages =("en","pt","es","fr","ca","da","fi","gl","nl","is","it","no","sv");
         $tokens->{languages} = \@languages;
 };
 

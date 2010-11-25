@@ -131,7 +131,7 @@ require ("dbInit.pl");
 			$writer->endTag('priority');
 	          $writer->endTag('url');
 		  # Add top urls by language
-		  my $count = &add_all_url($writer,$_) for qw(en pt es fr bg ca cs da fi gl el nl hu is it no pl sv tr);
+		  my $count = &add_all_url($writer,$_) for qw(en pt es fr ca da fi gl nl is it no sv);
 		
 	$writer->endTag('urlset');
 	
