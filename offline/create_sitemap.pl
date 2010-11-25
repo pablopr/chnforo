@@ -154,7 +154,7 @@ require ("dbInit.pl");
 	$writer->xmlDecl();
 	$writer->startTag('urlset',
 		 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9");
-		  my $count = &add_articles_urls_paginated($writer,$start,$_) for qw(en pt es fr bg ca cs da fi gl el nl hu is it no pl sv tr);
+		  my $count = &add_articles_urls_paginated($writer,$start,$_) for qw(en pt es fr ca da fi gl nl is it no sv);
 	$writer->endTag('urlset');
 	$writer->end();
 	$file->close();
