@@ -7,7 +7,8 @@ use HTML::Strip;
 use Data::Pageset::Render;
 use HTML::TagCloud;
 require "utils.pl";
-
+require "ads.pl";
+my %ads = &get_ads;
 our $VERSION = '0.1';
 my $article_service;
 
@@ -164,6 +165,7 @@ get  qr{ /([a-z]{2})/(\w+)/([0-9]+)}x => sub {
         	cloud_html => vars->{cloud_html},
         	article => $article,
         	seo => $seo_params,
+                ads => \%ads
         };
         
         template 'article', $params;
