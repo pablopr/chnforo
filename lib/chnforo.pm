@@ -9,6 +9,7 @@ use HTML::TagCloud;
 require "utils.pl";
 require "ads.pl";
 my %ads = &get_ads;
+my @languages =("en","pt","es","fr","ca","da","fi","gl","nl","is","it","no","sv");
 our $VERSION = '0.1';
 my $article_service;
 
@@ -20,7 +21,6 @@ before_template sub {
 	my $tokens = shift;
 	#metemos el idioma para todas las plantillas
         $tokens->{lang} = $article_service->{lang};
-        my @languages =("en","pt","es","fr","ca","da","fi","gl","nl","is","it","no","sv");
         $tokens->{languages} = \@languages;
 };
 
@@ -132,6 +132,8 @@ get  qr{ /([a-z]{2})/category/(\w+)/([0-9]+)}x => sub {
      	main_articles => \@articles,
      	seo => $seo_params,
      	pager => $pager,
+        category_name => $category_slug,
+	ads => \%ads
      };
      
      template 'index', $params;
@@ -217,7 +219,7 @@ get  qr{ /([a-z]{2})/(\w+)/([0-9]+)}x => sub {
 		categories => vars->{categories} , 
 		cloud_html => vars->{cloud_html},
 		main_articles => \@random_articles,
-		seo => $seo_params
+		seo => $seo_params,
 	     };
 	     
 	     template 'index', $params;	    

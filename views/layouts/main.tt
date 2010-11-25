@@ -74,7 +74,11 @@
 				    <% END %>
 				 </div>
 				 <div style="float:right;">
-                                       <% SET key = article.category %>
+				       <% IF article.category  %> 
+                                       		<% SET key = article.category %>
+				       <% ELSE %> 
+						<% SET key = category_name %>
+ 				       <% END %>
                                        <% IF key %>  
            				  <% ads.$key %>
                                         <% ELSE %> 
