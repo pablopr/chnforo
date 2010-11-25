@@ -15,18 +15,27 @@ sub send_posts_by_lang{
 	my $article = {};
         my $url = "";
 	my $content = "";
-	for my $category(@categories){
+
+	#solo uno en general, no uno por categoria por ahora.
+	#for my $category(@categories){
 		#$article = &get_hash_ref_query('select * from entries_'.$lang.' where category like "'.$category.'" order by rand() limit 1');
-#solo uno por en general, no unos por categoria por ahora.
-		$article = &get_hash_ref_query('select * from entries_'.$lang.' order by rand() limit 1');
+
+		$article = &get_hash_ref_query('select * from entries_'.$lang.' where posted = false order by rand() limit 1');
+		&flag_article_as_posted($article->{id},$lang);
                 $url = '<a href="http://www.knowrepository.com/'.$lang.'/'.$article->{title_slug}.'/'.$article->{id}.'" title="'.$article->{title}.'" class="left">
 '.$article->{title}.'</a>';
 		$content = $url."<br />".$article->{summary};
-                $posterous->add_post(title => $article->{title}, body => $content);
+                #$posterous->add_post(title => $article->{title}, body => $content);
                 print "Sending post: $article->{title} \n";
-		sleep(5);
-                break;
-	}
+		#sleep(5);
+                #break;
+	#}
+}
+
+sub flag_article_as_posted{
+	my $id = shift;
+	my $lang = shift;
+	&do_query('update entries_'.$lang.' set posted = true where id = '.$id);
 }
 
 1;
