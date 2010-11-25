@@ -25,9 +25,9 @@ sub send_posts_by_lang{
                 $url = '<a href="http://www.knowrepository.com/'.$lang.'/'.$article->{title_slug}.'/'.$article->{id}.'" title="'.$article->{title}.'" class="left">
 '.$article->{title}.'</a>';
 		$content = $url."<br />".$article->{summary};
-                #$posterous->add_post(title => $article->{title}, body => $content);
+                $posterous->add_post(title => $article->{title}, body => $content);
                 print "Sending post: $article->{title} \n";
-		#sleep(5);
+		sleep(5);
                 #break;
 	#}
 }
