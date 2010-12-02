@@ -1,7 +1,8 @@
 #!/usr/bin/env perl
+use lib '/var/www/knowrepository/offline/';
 use Posterous;
 use strict;
-require ("dbInit.pl");
+require ("/var/www/knowrepository/offline/dbInit.pl");
 
 my $posterous = Posterous->new('chnforo@imaginasoft.com','maskayerro');
 

@@ -4,7 +4,7 @@ use Web::Scraper;
 use WWW::Mechanize;
 use Lingua::Translate;
 use Encode;
-require ("dbInit.pl");
+require ("/var/www/knowrepository/offline/dbInit.pl");
 binmode( STDIN,  ':utf8' );
 binmode( STDOUT, ':utf8' );
 

@@ -1,6 +1,5 @@
 package Posterous;
 
-use 5.010;
 use strict;
 use warnings;
 
@@ -9,10 +8,8 @@ our $VERSION = '0.03';
 use LWP::UserAgent;
 use HTTP::Request;
 use MIME::Base64;
-use Rubyish::Attribute;
 use Data::Dumper;
 use Attribute::Protected;
-
 
 our $DOMAIN = "http://posterous.com";
 
@@ -23,61 +20,33 @@ our $READPOST_PATH = $DOMAIN."/api/readposts";
 
 our $UA = LWP::UserAgent->new();
 
-BEGIN {
-  attr_accessor "user", "pass", "site_id";
-}
 
 sub new {
   my ($class, $user, $pass, $site_id) = @_;
   die "didn\'t give user\' email or password" unless defined($user) && defined($pass);
-  my $self = bless {}, $class;
-  __user__ = $user;
-  __pass__ = $pass;
-  __site_id__ = $site_id if $site_id;
-  $self;
+my $self = {
+  user => $user,
+  pass => $pass,
+  site_id => $site_id
+};  
+  bless $self, $class;
+return $self;
 }
 
 sub auth_key : Public {
   my ($self) = @_;
-  state $auth_key;
-  $auth_key //= encode_base64($self->user.":".$self->pass);
+  my $auth_key = encode_base64($self->{user}.":".$self->{pass});
   $auth_key;
 }
 
 sub account_info : Public {
   my ($self) = @_;
-  state $account_info;
-  $account_info //= HTTP::Request->new( GET => $AUTH_PATH )
+  my $account_info;
+  $account_info = HTTP::Request->new( GET => $AUTH_PATH )
                                  ->basic_auth($self->auth_key)
                                  ->submit_by($UA)
                                  ->xmlized_content;
   $account_info;
-}
-
-sub read_posts : Public {
-  my ($self, %options) = @_;
-  HTTP::Request->new( GET => $READPOST_PATH . "?" . options2query(%options) )
-               ->basic_auth($self->auth_key)
-               ->submit_by($UA)
-               ->xmlized_content;
-}
-
-sub read_public_posts : Public {
-  my ($self, %options) = @_;
-  $options{site_id} = $self->site_id unless exists($options{site_id});
-  die "no site_id or hostname is given" unless exists($options{site_id}) or exists($options{hostname});
-  HTTP::Request->new( GET => $READPOST_PATH . "?" . options2query(%options) )
-               ->submit_by($UA)
-               ->xmlized_content;
-}
-
-sub primary_site : Public {
-  my ($self) = @_;
-  state $primary_site;
-  while ( my ($key, $value) = each %{ $self->account_info->{site} } ) {
-    $primary_site = $value->{id} if $value->{primary} eq "true"
-  }
-  $primary_site;
 }
 
 sub add_post : Public {
@@ -87,12 +56,6 @@ sub add_post : Public {
   $UA->request($request)->xmlized_content;
 }
 
-sub add_comment :Public {
-  my ($self, %options) = @_;
-  my $request = HTTP::Request->new( POST => $COMMMENT_PATH )->basic_auth($self->auth_key);
-  $request->content(options2query(%options));
-  $UA->request($request)->xmlized_content;
-}
 
 sub options2query : Protected {
   my (%options) = @_;
@@ -100,7 +63,7 @@ sub options2query : Protected {
   while ( my ($key,$value) = each %options) {
     $query .= "$key=$value&";
   }
-  $query //= " ";         # avoid warning $query was not initialized
+  #$query = " ";         # avoid warning $query was not initialized
   $query =~ s/&$//g;
   $query;
 }
