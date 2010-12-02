@@ -23,7 +23,7 @@ require ("dbInit.pl");
 		  for (my $i=1; $i<$count ; $i++){
 			      $writer->startTag('sitemap');
 					$writer->startTag('loc');
-						$writer->characters("http://www.knowrepository.com/sitemap_$i.xml");
+						$writer->characters("http://knowrepository.com/sitemap_$i.xml");
 					$writer->endTag('loc');  
 					$writer->startTag('lastmod');
 						#my $now = localtime time;
@@ -57,7 +57,7 @@ require ("dbInit.pl");
       for my $page(@pages){
       	      $writer->startTag('url');
 			$writer->startTag('loc');
-				$writer->characters("http://www.knowrepository.com/$lang/$page/");
+				$writer->characters("http://knowrepository.com/$lang/$page/");
 			$writer->endTag('loc');  
 			$writer->startTag('lastmod');
 				$writer->characters('2010-11-11');
@@ -95,7 +95,7 @@ require ("dbInit.pl");
       
       $writer->startTag('url');
 			$writer->startTag('loc');
-			$writer->characters("http://www.knowrepository.com/$lang/$article->{title_slug}/$article->{id}");
+			$writer->characters("http://knowrepository.com/$lang/$article->{title_slug}/$article->{id}");
 			$writer->endTag('loc');  
 			$writer->startTag('lastmod');
 				$writer->characters($article->{original_date});
@@ -118,7 +118,7 @@ require ("dbInit.pl");
 		 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9");
 	          $writer->startTag('url');
 			$writer->startTag('loc');
-				$writer->characters("http://www.knowrepository.com/");
+				$writer->characters("http://knowrepository.com/");
 			$writer->endTag('loc');  
 			$writer->startTag('lastmod');
 				$writer->characters('2010-11-11');
