@@ -4,7 +4,7 @@ use Posterous;
 use strict;
 require ("/var/www/knowrepository/offline/dbInit.pl");
 
-my $posterous = Posterous->new('chnforo@imaginasoft.com','maskayerro');
+my $posterous = Posterous->new('chnforo@imaginasoft.com','xxxx');
 
 #send one post by category by lang
 &send_posts_by_lang($_) for qw(en pt es fr ca da fi gl nl is it no sv);
